@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
 import { Footer } from "@/components/footer"
 import { useCart } from "@/components/cart-provider"
-import { Home, Zap, Clock, DollarSign, ArrowRight } from "lucide-react"
+import { Home, Zap, Clock, DollarSign, ArrowRight, Target, Wrench } from "lucide-react"
 import Link from "next/link"
 
 export default function HomePage() {
@@ -56,7 +56,7 @@ export default function HomePage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h1 className="text-5xl font-black mb-6 text-foreground">
-                Viviendas Tu Nuevo Hogar
+                Viviendas tu nuevo hogar
               </h1>
               <p className="text-2xl font-semibold text-muted-foreground mb-4">
                 Tu casa, en menos tiempo.
@@ -92,16 +92,62 @@ export default function HomePage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <Button size="lg" asChild>
                   <Link href="/catalogo">
-                    Ver Catálogo
+                    Ver catálogo
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" asChild>
                   <Link href="/contacto">
-                    Solicitar Presupuesto
+                    Solicitar presupuesto
                   </Link>
                 </Button>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Croquis Disponibles */}
+        <section className="py-20 bg-muted/20">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <div className="p-3 bg-primary rounded-lg">
+                  <Target className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h2 className="text-3xl font-bold text-foreground">
+                  Nuestros croquis
+                </h2>
+              </div>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+                Descubre nuestra colección completa de croquis profesionales, desde viviendas compactas hasta casas familiares amplias. Cada diseño está optimizado para maximizar el espacio y la funcionalidad.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              {[
+                { size: "22m²", description: "Vivienda compacta ideal para una persona o pareja" },
+                { size: "25m²", description: "Espacio funcional para pequeñas familias" },
+                { size: "29m²", description: "Vivienda con un dormitorio y living comedor" },
+                { size: "36m²", description: "Casa con dos dormitorios y espacios amplios" },
+                { size: "47m²", description: "Vivienda familiar con tres dormitorios" },
+                { size: "48m²", description: "Casa espaciosa para familias medianas" },
+                { size: "55m²", description: "Vivienda amplia con múltiples dormitorios" },
+                { size: "66m²", description: "Casa grande para familias numerosas" }
+              ].map((croquis, index) => (
+                <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="text-3xl font-bold text-primary mb-2">{croquis.size}</div>
+                    <p className="text-sm text-muted-foreground">{croquis.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+            <div className="text-center">
+              <Button size="lg" asChild>
+                <Link href="/catalogo?categoria=Croquis%20por%20Tamaño">
+                  Ver croquis
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </section>
@@ -110,9 +156,14 @@ export default function HomePage() {
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground mb-4">
-                Soluciones para cada necesidad
-              </h2>
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <div className="p-3 bg-primary rounded-lg">
+                  <Home className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h2 className="text-3xl font-bold text-foreground">
+                  Soluciones para cada necesidad
+                </h2>
+              </div>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Nuestras viviendas premoldeadas se adaptan a diferentes usos y estilos de vida
               </p>
@@ -132,9 +183,68 @@ export default function HomePage() {
             </div>
 
             <div className="text-center">
-              <Button variant="outline" size="lg" asChild>
-                <Link href="/nosotros">
-                  Conoce más sobre nosotros
+              <Button size="lg" asChild>
+                <Link href="/catalogo?categoria=Viviendas%20por%20Tipo">
+                  Ver todas las viviendas
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* Servicios */}
+        <section className="py-20 bg-muted/30">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <div className="p-3 bg-primary rounded-lg">
+                  <Wrench className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h2 className="text-3xl font-bold text-foreground">
+                  Nuestros servicios
+                </h2>
+              </div>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                Ofrecemos servicios especializados para complementar tu proyecto de vivienda
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              {[
+                {
+                  title: "Instalación profesional",
+                  description: "Equipo especializado para instalar tu vivienda en el terreno",
+                  price: "Desde $15.000"
+                },
+                {
+                  title: "Personalización de diseño",
+                  description: "Adaptamos el diseño a tus necesidades específicas",
+                  price: "Desde $8.000"
+                },
+                {
+                  title: "Mantenimiento preventivo",
+                  description: "Servicio de mantenimiento para mantener tu vivienda en perfectas condiciones",
+                  price: "Desde $5.000"
+                }
+              ].map((service, index) => (
+                <Card key={index} className="text-center hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className="p-3 bg-primary/10 rounded-lg w-fit mx-auto mb-4">
+                      <Wrench className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">{service.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-3 leading-relaxed">{service.description}</p>
+                    <p className="text-lg font-bold text-primary">{service.price}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <Button size="lg" asChild>
+                <Link href="/catalogo?categoria=Servicios">
+                  Ver todos los servicios
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -150,16 +260,16 @@ export default function HomePage() {
             </h2>
             <p className="text-lg mb-8 opacity-90">
               Contáctanos hoy mismo y descubre cómo podemos ayudarte a construir tu nuevo hogar
-            </p>
+              </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" variant="secondary" className="cta-presupuesto-button" asChild>
                 <Link href="/contacto">
-                  Solicitar Presupuesto
+                  Solicitar presupuesto
                 </Link>
               </Button>
               <Button size="lg" variant="outline" className="cta-outline-button" asChild>
                 <Link href="/catalogo">
-                  Ver Nuestros Proyectos
+                  Ver catálogo
                 </Link>
               </Button>
             </div>

@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Search, ChevronLeft, ChevronRight, Filter, ChevronDown, ChevronUp, Home, Building2, Waves, TreePine, Users, Target, Zap } from "lucide-react"
 import { useCart } from "@/components/cart-provider"
+import { useSearchParams } from "next/navigation"
 
 import { products } from "@/lib/products"
 
@@ -19,12 +20,26 @@ const ITEMS_PER_PAGE = 12
 
 export default function CatalogoPage() {
   const cart = useCart()
+  const searchParams = useSearchParams()
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("Todas")
   const [selectedSubcategory, setSelectedSubcategory] = useState("Todas")
   const [sortBy, setSortBy] = useState("name")
   const [currentPage, setCurrentPage] = useState(1)
   const [showFilters, setShowFilters] = useState(false)
+
+  // Aplicar filtros desde URL al cargar la página
+  useEffect(() => {
+    const categoria = searchParams.get('categoria')
+    const subcategoria = searchParams.get('subcategoria')
+    
+    if (categoria) {
+      setSelectedCategory(categoria)
+    }
+    if (subcategoria) {
+      setSelectedSubcategory(subcategoria)
+    }
+  }, [searchParams])
 
   // Resetear subcategoría cuando cambie la categoría
   useEffect(() => {
@@ -107,7 +122,7 @@ export default function CatalogoPage() {
         <section className="bg-gradient-to-r from-primary/10 to-secondary/10 py-12">
           <div className="container mx-auto px-4">
             <div className="text-center">
-              <h1 className="text-4xl font-bold text-foreground mb-4">Nuestro Catálogo</h1>
+              <h1 className="text-4xl font-bold text-foreground mb-4">Nuestro catálogo</h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Descubre nuestra amplia gama de croquis, viviendas premoldeadas y servicios especializados
               </p>

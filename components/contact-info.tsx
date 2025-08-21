@@ -14,18 +14,16 @@ export function ContactInfo() {
           <div className="flex items-start gap-3">
             <Phone className="h-5 w-5 text-primary mt-0.5" />
             <div>
-              <p className="font-medium">Teléfonos</p>
+              <p className="font-medium">Teléfono</p>
               <p className="text-sm text-muted-foreground">+54 9 11 1234-5678</p>
-              <p className="text-sm text-muted-foreground">+54 9 11 8765-4321</p>
             </div>
           </div>
 
           <div className="flex items-start gap-3">
             <Mail className="h-5 w-5 text-primary mt-0.5" />
             <div>
-              <p className="font-medium">Emails</p>
+              <p className="font-medium">Email</p>
               <p className="text-sm text-muted-foreground">viviendastunuevohogar@gmail.com</p>
-              <p className="text-sm text-muted-foreground">ventas@tunuevohogar.com</p>
             </div>
           </div>
 
@@ -33,8 +31,7 @@ export function ContactInfo() {
             <MapPin className="h-5 w-5 text-primary mt-0.5" />
             <div>
               <p className="font-medium">Ubicación</p>
-              <p className="text-sm text-muted-foreground">Buenos Aires, Argentina</p>
-              <p className="text-sm text-muted-foreground">(Dirección específica a definir)</p>
+              <p className="text-sm text-muted-foreground">Argentina</p>
             </div>
           </div>
 
@@ -42,9 +39,7 @@ export function ContactInfo() {
             <Clock className="h-5 w-5 text-primary mt-0.5" />
             <div>
               <p className="font-medium">Horarios de Atención</p>
-              <p className="text-sm text-muted-foreground">Lunes a Viernes: 9:00 - 18:00</p>
-              <p className="text-sm text-muted-foreground">Sábados: 9:00 - 13:00</p>
-              <p className="text-sm text-muted-foreground">Domingos: Cerrado</p>
+              <p className="text-sm text-muted-foreground">A confirmar</p>
             </div>
           </div>
         </CardContent>

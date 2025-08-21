@@ -4,8 +4,9 @@ import { Footer } from "@/components/footer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle, Home, Users, Target, Hammer } from "lucide-react"
+import { CheckCircle, Home, Users, Hammer } from "lucide-react"
 import { useCart } from "@/components/cart-provider"
+import Link from "next/link"
 
 export default function NosotrosPage() {
   const cart = useCart()
@@ -67,17 +68,6 @@ export default function NosotrosPage() {
     "Cabañas"
   ]
 
-  const croquisSizes = [
-    { size: "22m²", description: "Vivienda compacta ideal para una persona o pareja" },
-    { size: "25m²", description: "Espacio funcional para pequeñas familias" },
-    { size: "29m²", description: "Vivienda con un dormitorio y living comedor" },
-    { size: "36m²", description: "Casa con dos dormitorios y espacios amplios" },
-    { size: "47m²", description: "Vivienda familiar con tres dormitorios" },
-    { size: "48m²", description: "Casa espaciosa para familias medianas" },
-    { size: "55m²", description: "Vivienda amplia con múltiples dormitorios" },
-    { size: "66m²", description: "Casa grande para familias numerosas" }
-  ]
-
   return (
     <div className="min-h-screen">
       <Header cartItemsCount={cart.itemsCount} onCartOpen={cart.openCart} />
@@ -96,7 +86,7 @@ export default function NosotrosPage() {
         </section>
 
         <div className="container mx-auto px-4 py-12">
-          {/* Nuestra Historia */}
+          {/* Nuestra Visión */}
           <div className="mb-20">
             <div className="text-center mb-12">
               <div className="flex items-center justify-center space-x-3 mb-6">
@@ -104,17 +94,17 @@ export default function NosotrosPage() {
                   <Users className="h-8 w-8 text-primary-foreground" />
                 </div>
                 <h2 className="text-3xl font-bold text-foreground">
-                  Nuestra Historia
+                  Nuestra Visión
                 </h2>
               </div>
             </div>
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="space-y-6">
                 <h3 className="text-2xl font-semibold text-primary mb-4">
-                  Fundada en 2025
+                  Quienes somos
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                  En Viviendas Tu Nuevo Hogar, fundada en 2025, somos un equipo de profesionales que dedicó su vida a la construcción de viviendas premoldeadas. 
+                  Somos un equipo de profesionales que dedicó su vida a la construcción de viviendas premoldeadas. 
                   Entendemos la dificultad de muchas personas para acceder a una casa propia.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
@@ -164,33 +154,6 @@ export default function NosotrosPage() {
             </div>
           </div>
 
-          {/* Croquis Disponibles */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <div className="flex items-center justify-center space-x-3 mb-6">
-                <div className="p-3 bg-secondary rounded-lg">
-                  <Target className="h-8 w-8 text-secondary-foreground" />
-                </div>
-                <h2 className="text-3xl font-bold text-foreground">
-                  Nuestros Croquis
-                </h2>
-              </div>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
-                Actualmente estamos reformando nuestros croquis. El orden será de menor a mayor, ofreciendo opciones desde viviendas compactas hasta casas familiares amplias:
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {croquisSizes.map((croquis, index) => (
-                <Card key={index} className="text-center hover:shadow-lg transition-shadow">
-                  <CardContent className="p-6">
-                    <div className="text-3xl font-bold text-primary mb-2">{croquis.size}</div>
-                    <p className="text-sm text-muted-foreground">{croquis.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-
           {/* Estructura y Materiales */}
           <div className="mb-20">
             <div className="text-center mb-12">
@@ -229,6 +192,30 @@ export default function NosotrosPage() {
 
 
         </div>
+
+        {/* CTA Final */}
+        <section className="py-20 text-primary-foreground cta-section">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold mb-4">
+              ¿Listo para hacer realidad tu sueño?
+            </h2>
+            <p className="text-lg mb-8 opacity-90">
+              Contáctanos hoy mismo y descubre cómo podemos ayudarte a construir tu nuevo hogar
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" variant="secondary" className="cta-presupuesto-button" asChild>
+                <Link href="/contacto">
+                  Solicitar presupuesto
+                </Link>
+              </Button>
+              <Button size="lg" variant="outline" className="cta-outline-button" asChild>
+                <Link href="/catalogo">
+                  Ver catálogo
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
       </main>
 
       <Footer />

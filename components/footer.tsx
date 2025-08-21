@@ -7,6 +7,7 @@ export function Footer() {
   const navLinks = [
     { href: "/", label: "Inicio" },
     { href: "/catalogo", label: "Catálogo" },
+    { href: "/nosotros", label: "Nosotros" },
     { href: "/contacto", label: "Contacto" },
   ]
 
@@ -56,7 +57,7 @@ export function Footer() {
               </li>
               <li className="flex items-start space-x-2 text-sm">
                 <MapPin className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                <span className="text-muted-foreground">Buenos Aires, Argentina</span>
+                <span className="text-muted-foreground">Argentina</span>
               </li>
             </ul>
           </div>
@@ -78,7 +79,6 @@ export function Footer() {
                 <Facebook className="h-5 w-5" />
               </Link>
             </div>
-            <p className="text-xs text-muted-foreground mt-4">Próximamente en Instagram y Facebook</p>
           </div>
         </div>
 
@@ -86,7 +86,14 @@ export function Footer() {
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
             © {currentYear} Viviendas Tu Nuevo Hogar. Desarrollado y diseñado por{" "}
-            <span className="text-primary font-medium">Nexium Solutions y Ditiero</span>.
+            <a 
+              href="https://nexiumsolutions.online/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-primary font-medium hover:underline transition-colors"
+            >
+              Nexium Solutions y DiTiero
+            </a>.
           </p>
         </div>
       </div>

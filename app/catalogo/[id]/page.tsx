@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import { useParams, useRouter } from "next/navigation"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -17,17 +17,10 @@ export default function ProductPage() {
   const params = useParams()
   const router = useRouter()
   const cart = useCart()
-  const [selectedImage, setSelectedImage] = useState(0)
   const [quantity, setQuantity] = useState(1)
 
   // Buscar el producto usando la función centralizada
   const product = getProductById(params.id as string)
-
-  useEffect(() => {
-    if (product) {
-      setSelectedImage(0)
-    }
-  }, [product])
 
   if (!product) {
     return (
@@ -103,13 +96,11 @@ export default function ProductPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Left Column - Images */}
             <div className="space-y-4">
-              {/* Main Image */}
+              {/* Main Image Placeholder */}
               <div className="relative">
-                <img
-                  src={product.images[selectedImage]}
-                  alt={product.name}
-                  className="w-full h-96 object-cover rounded-lg shadow-lg"
-                />
+                <div className="w-full h-96 bg-muted rounded-lg shadow-lg flex items-center justify-center">
+                  <Home className="h-16 w-16 text-muted-foreground" />
+                </div>
                 <div className="absolute top-2 left-2 flex gap-2">
                   <Badge className={`${getTypeColor(product.type)} text-white`}>
                     {getTypeLabel(product.type)}
@@ -120,22 +111,15 @@ export default function ProductPage() {
                 </div>
               </div>
 
-              {/* Thumbnail Images */}
+              {/* Thumbnail Placeholders */}
               <div className="grid grid-cols-4 gap-2">
-                {product.images.map((image, index) => (
-                  <button
+                {[1, 2, 3, 4].map((index) => (
+                  <div
                     key={index}
-                    onClick={() => setSelectedImage(index)}
-                    className={`relative overflow-hidden rounded-lg border-2 transition-all ${
-                      selectedImage === index ? 'border-primary' : 'border-transparent'
-                    }`}
+                    className="w-full h-20 bg-muted rounded-lg border-2 border-transparent flex items-center justify-center"
                   >
-                    <img
-                      src={image}
-                      alt={`${product.name} - Vista ${index + 1}`}
-                      className="w-full h-20 object-cover"
-                    />
-                  </button>
+                    <Home className="h-6 w-6 text-muted-foreground" />
+                  </div>
                 ))}
               </div>
             </div>
@@ -255,24 +239,22 @@ export default function ProductPage() {
             </div>
 
             {/* Related Products */}
-                          <div>
-                <h2 className="text-2xl font-bold mb-6">Productos relacionados</h2>
-                <div className="grid md:grid-cols-3 gap-6">
-                  {getRelatedProducts(product.id, product.category, 3).map((relatedProduct) => (
-                    <Card key={relatedProduct.id} className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => router.push(`/catalogo/${relatedProduct.id}`)}>
-                      <CardContent className="p-4">
-                        <img
-                          src={relatedProduct.image}
-                          alt={relatedProduct.name}
-                          className="w-full h-32 object-cover rounded-md mb-3"
-                        />
-                        <h3 className="font-semibold mb-2 line-clamp-2">{relatedProduct.name}</h3>
-                        <p className="text-primary font-bold">${relatedProduct.price.toLocaleString()}</p>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
+            <div>
+              <h2 className="text-2xl font-bold mb-6">Productos relacionados</h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                {getRelatedProducts(product.id, product.category, 3).map((relatedProduct) => (
+                  <Card key={relatedProduct.id} className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => router.push(`/catalogo/${relatedProduct.id}`)}>
+                    <CardContent className="p-4">
+                      <div className="w-full h-32 bg-muted rounded-md mb-3 flex items-center justify-center">
+                        <Home className="h-8 w-8 text-muted-foreground" />
+                      </div>
+                      <h3 className="font-semibold mb-2 line-clamp-2">{relatedProduct.name}</h3>
+                      <p className="text-primary font-bold">${relatedProduct.price.toLocaleString()}</p>
+                    </CardContent>
+                  </Card>
+                ))}
               </div>
+            </div>
           </div>
         </div>
       </main>

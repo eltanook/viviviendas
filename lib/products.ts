@@ -7,7 +7,7 @@ export const products = [
     price: 45000,
     category: "Croquis por Tamaño",
     subcategory: "22m²",
-    image: "/modern-house-exterior.png",
+    // image: "/modern-house-exterior.png", // Comentado - imagen generada por IA
     description: "Vivienda compacta ideal para una persona o pareja. Incluye living comedor, cocina, baño y dormitorio.",
     features: ["1 dormitorio", "Living comedor integrado", "Cocina funcional", "Baño completo"],
     deliveryTime: "4-6 semanas",
@@ -28,12 +28,12 @@ export const products = [
       "Instrucciones de montaje",
       "Garantía de diseño"
     ],
-    images: [
-      "/modern-house-exterior.png",
-      "/modern-house-interior.png",
-      "/modern-house-bedroom.png",
-      "/modern-house-kitchen.png"
-    ]
+    // images: [ // Comentado - imágenes generadas por IA
+    //   "/modern-house-exterior.png",
+    //   "/modern-house-interior.png",
+    //   "/modern-house-bedroom.png",
+    //   "/modern-house-kitchen.png"
+    // ]
   },
   {
     id: "croquis-25",
@@ -41,12 +41,12 @@ export const products = [
     price: 52000,
     category: "Croquis por Tamaño",
     subcategory: "25m²",
-    image: "/modern-house-interior.png",
+    // image: "/modern-house-interior.png", // Comentado - imagen generada por IA
     description: "Espacio funcional para pequeñas familias con distribución optimizada.",
     features: ["1 dormitorio", "Living comedor amplio", "Cocina equipada", "Baño completo"],
     deliveryTime: "4-6 semanas",
     type: "croquis" as const,
-    longDescription: "Con 25m² de espacio bien distribuido, esta vivienda ofrece una solución ideal para pequeñas familias. El living comedor amplio se conecta con una cocina equipada, mientras que el dormitorio principal proporciona privacidad y confort. El baño completo incluye todas las comodidades necesarias. La distribución permite una circulación fluida entre los espacios.",
+    longDescription: "Con 25m² de espacio bien distribuido, esta vivienda ofrece una solución ideal para pequeñas familias. El living comedor amplio se conecta con una cocina equipada, mientras que el dormitorio principal proporciona privacidad y confort. El baño completo incluye todas las comodidades necesarias. La distribución permite una circulación fluida entre todos los espacios.",
     specifications: {
       "Área total": "25m²",
       "Dormitorios": "1",
@@ -62,12 +62,12 @@ export const products = [
       "Instrucciones de montaje",
       "Garantía de diseño"
     ],
-    images: [
-      "/modern-house-interior.png",
-      "/modern-house-exterior.png",
-      "/modern-house-bedroom.png",
-      "/modern-house-kitchen.png"
-    ]
+    // images: [ // Comentado - imágenes generadas por IA
+    //   "/modern-house-interior.png",
+    //   "/modern-house-exterior.png",
+    //   "/modern-house-bedroom.png",
+    //   "/modern-house-kitchen.png"
+    // ]
   },
   {
     id: "croquis-29",
@@ -75,7 +75,7 @@ export const products = [
     price: 58000,
     category: "Croquis por Tamaño",
     subcategory: "29m²",
-    image: "/modern-house-bedroom.png",
+    // image: "/modern-house-bedroom.png", // Comentado - imagen generada por IA
     description: "Vivienda con un dormitorio y living comedor espacioso.",
     features: ["1 dormitorio amplio", "Living comedor", "Cocina", "Baño completo"],
     deliveryTime: "4-6 semanas",
@@ -96,12 +96,12 @@ export const products = [
       "Instrucciones de montaje",
       "Garantía de diseño"
     ],
-    images: [
-      "/modern-house-bedroom.png",
-      "/modern-house-interior.png",
-      "/modern-house-exterior.png",
-      "/modern-house-kitchen.png"
-    ]
+    // images: [ // Comentado - imágenes generadas por IA
+    //   "/modern-house-bedroom.png",
+    //   "/modern-house-interior.png",
+    //   "/modern-house-exterior.png",
+    //   "/modern-house-kitchen.png"
+    // ]
   },
   {
     id: "croquis-36",
@@ -109,7 +109,7 @@ export const products = [
     price: 72000,
     category: "Croquis por Tamaño",
     subcategory: "36m²",
-    image: "/modern-house-kitchen.png",
+    // image: "/modern-house-kitchen.png", // Comentado - imagen generada por IA
     description: "Casa con dos dormitorios y espacios amplios para familias pequeñas.",
     features: ["2 dormitorios", "Living comedor", "Cocina", "Baño completo"],
     deliveryTime: "5-7 semanas",
@@ -130,12 +130,12 @@ export const products = [
       "Instrucciones de montaje",
       "Garantía de diseño"
     ],
-    images: [
-      "/modern-house-kitchen.png",
-      "/modern-house-bedroom.png",
-      "/modern-house-interior.png",
-      "/modern-house-exterior.png"
-    ]
+    // images: [ // Comentado - imágenes generadas por IA
+    //   "/modern-house-kitchen.png",
+    //   "/modern-house-bedroom.png",
+    //   "/modern-house-interior.png",
+    //   "/modern-house-exterior.png"
+    // ]
   },
   {
     id: "croquis-47",
@@ -143,7 +143,7 @@ export const products = [
     price: 85000,
     category: "Croquis por Tamaño",
     subcategory: "47m²",
-    image: "/traditional-family-house.png",
+    // image: "/traditional-family-house.png", // Comentado - imagen generada por IA
     description: "Vivienda familiar con tres dormitorios y espacios de convivencia.",
     features: ["3 dormitorios", "Living comedor", "Cocina", "2 baños"],
     deliveryTime: "6-8 semanas",
@@ -164,12 +164,12 @@ export const products = [
       "Instrucciones de montaje",
       "Garantía de diseño"
     ],
-    images: [
-      "/traditional-family-house.png",
-      "/modern-house-bedroom.png",
-      "/modern-house-interior.png",
-      "/modern-house-kitchen.png"
-    ]
+    // images: [ // Comentado - imágenes generadas por IA
+    //   "/traditional-family-house.png",
+    //   "/modern-house-bedroom.png",
+    //   "/modern-house-interior.png",
+    //   "/modern-house-kitchen.png"
+    // ]
   },
   {
     id: "croquis-66",
@@ -177,7 +177,7 @@ export const products = [
     price: 110000,
     category: "Croquis por Tamaño",
     subcategory: "66m²",
-    image: "/traditional-house-interior.png",
+    // image: "/traditional-house-interior.png", // Comentado - imagen generada por IA
     description: "Casa grande para familias numerosas con amplios espacios.",
     features: ["3-4 dormitorios", "Living comedor", "Cocina", "2 baños", "Galería"],
     deliveryTime: "7-9 semanas",
@@ -198,12 +198,12 @@ export const products = [
       "Instrucciones de montaje",
       "Garantía de diseño"
     ],
-    images: [
-      "/traditional-house-interior.png",
-      "/traditional-family-house.png",
-      "/modern-house-bedroom.png",
-      "/modern-house-kitchen.png"
-    ]
+    // images: [ // Comentado - imágenes generadas por IA
+    //   "/traditional-house-interior.png",
+    //   "/traditional-family-house.png",
+    //   "/modern-house-bedroom.png",
+    //   "/modern-house-kitchen.png"
+    // ]
   },
 
   // Viviendas por Tipo de Uso
@@ -213,7 +213,7 @@ export const products = [
     price: 85000,
     category: "Viviendas por Tipo",
     subcategory: "Vivienda Permanente",
-    image: "/modern-house-exterior.png",
+    // image: "/modern-house-exterior.png", // Comentado - imagen generada por IA
     description: "Vivienda diseñada para residencia permanente con todos los acabados y comodidades.",
     features: ["Acabados premium", "Instalaciones completas", "Aislamiento térmico", "Garantía extendida"],
     deliveryTime: "8-10 semanas",
@@ -235,12 +235,12 @@ export const products = [
       "Garantía extendida",
       "Manual de mantenimiento"
     ],
-    images: [
-      "/modern-house-exterior.png",
-      "/modern-house-interior.png",
-      "/modern-house-bedroom.png",
-      "/modern-house-kitchen.png"
-    ]
+    // images: [ // Comentado - imágenes generadas por IA
+    //   "/modern-house-exterior.png",
+    //   "/modern-house-interior.png",
+    //   "/modern-house-bedroom.png",
+    //   "/modern-house-kitchen.png"
+    // ]
   },
   {
     id: "casa-quinta",
@@ -248,7 +248,7 @@ export const products = [
     price: 95000,
     category: "Viviendas por Tipo",
     subcategory: "Casa Quinta",
-    image: "/country-house-garden.png",
+    // image: "/country-house-garden.png", // Comentado - imagen generada por IA
     description: "Perfecta para escapadas familiares, con amplio jardín y galería.",
     features: ["Galería cubierta", "Jardín amplio", "Estilo rústico", "Conexión con naturaleza"],
     deliveryTime: "8-10 semanas",
@@ -270,12 +270,12 @@ export const products = [
       "Acabados rústicos",
       "Manual de mantenimiento"
     ],
-    images: [
-      "/country-house-garden.png",
-      "/country-house-interior.png",
-      "/country-house-bedroom.png",
-      "/country-house-porch.png"
-    ]
+    // images: [ // Comentado - imágenes generadas por IA
+    //   "/country-house-garden.png",
+    //   "/country-house-interior.png",
+    //   "/country-house-bedroom.png",
+    //   "/country-house-porch.png"
+    // ]
   },
   {
     id: "casa-playa",
@@ -283,7 +283,7 @@ export const products = [
     price: 105000,
     category: "Viviendas por Tipo",
     subcategory: "Casa de Playa",
-    image: "/mediterranean-beach-house.png",
+    // image: "/mediterranean-beach-house.png", // Comentado - imagen generada por IA
     description: "Diseño mediterráneo ideal para disfrutar frente al mar.",
     features: ["Resistente a humedad", "Terraza", "Vistas al mar", "Materiales marinos"],
     deliveryTime: "8-10 semanas",
@@ -305,12 +305,12 @@ export const products = [
       "Acabados premium",
       "Manual de mantenimiento"
     ],
-    images: [
-      "/mediterranean-beach-house.png",
-      "/coastal-villa-interior.png",
-      "/coastal-villa-bedroom.png",
-      "/coastal-villa-pool.png"
-    ]
+    // images: [ // Comentado - imágenes generadas por IA
+    //   "/mediterranean-beach-house.png",
+    //   "/coastal-villa-interior.png",
+    //   "/coastal-villa-bedroom.png",
+    //   "/coastal-villa-pool.png"
+    // ]
   },
   {
     id: "complejo-turistico",
@@ -318,7 +318,7 @@ export const products = [
     price: 75000,
     category: "Viviendas por Tipo",
     subcategory: "Complejo Turístico",
-    image: "/modern-tourist-cabin.png",
+    // image: "/modern-tourist-cabin.png", // Comentado - imagen generada por IA
     description: "Módulo compacto y funcional para complejos turísticos.",
     features: ["Diseño turístico", "Fácil mantenimiento", "Rápida instalación", "Rentabilidad"],
     deliveryTime: "6-8 semanas",
@@ -340,12 +340,12 @@ export const products = [
       "Garantía comercial",
       "Soporte técnico"
     ],
-    images: [
-      "/modern-tourist-cabin.png",
-      "/tourist-cabin-interior.png",
-      "/tourist-cabin-bedroom.png",
-      "/tourist-cabin-deck.png"
-    ]
+    // images: [ // Comentado - imágenes generadas por IA
+    //   "/modern-tourist-cabin.png",
+    //   "/tourist-cabin-interior.png",
+    //   "/tourist-cabin-bedroom.png",
+    //   "/tourist-cabin-deck.png"
+    // ]
   },
   {
     id: "cabana-rustica",
@@ -353,7 +353,7 @@ export const products = [
     price: 65000,
     category: "Viviendas por Tipo",
     subcategory: "Cabaña Rústica",
-    image: "/rustic-premium-cabin.png",
+    // image: "/rustic-premium-cabin.png", // Comentado - imagen generada por IA
     description: "Estilo rústico con todas las comodidades modernas.",
     features: ["Estilo rústico", "Materiales naturales", "Chimenea", "Acabados premium"],
     deliveryTime: "7-9 semanas",
@@ -375,12 +375,12 @@ export const products = [
       "Acabados premium",
       "Manual de mantenimiento"
     ],
-    images: [
-      "/rustic-premium-cabin.png",
-      "/rustic-cabin-interior.png",
-      "/rustic-cabin-bedroom.png",
-      "/rustic-cabin-fireplace.png"
-    ]
+    // images: [ // Comentado - imágenes generadas por IA
+    //   "/rustic-premium-cabin.png",
+    //   "/rustic-cabin-interior.png",
+    //   "/rustic-cabin-bedroom.png",
+    //   "/rustic-cabin-fireplace.png"
+    // ]
   },
   {
     id: "vivienda-alquiler",
@@ -388,7 +388,7 @@ export const products = [
     price: 70000,
     category: "Viviendas por Tipo",
     subcategory: "Vivienda de Alquiler",
-    image: "/investment-property-house.png",
+    // image: "/investment-property-house.png", // Comentado - imagen generada por IA
     description: "Diseñada para maximizar la rentabilidad de tu inversión.",
     features: ["Diseño funcional", "Bajo mantenimiento", "Alta rentabilidad", "Fácil gestión"],
     deliveryTime: "6-8 semanas",
@@ -410,12 +410,12 @@ export const products = [
       "Garantía comercial",
       "Soporte técnico"
     ],
-    images: [
-      "/investment-property-house.png",
-      "/investment-house-interior.png",
-      "/investment-house-bedroom.png",
-      "/investment-house-kitchen.png"
-    ]
+    // images: [ // Comentado - imágenes generadas por IA
+    //   "/investment-property-house.png",
+    //   "/investment-house-interior.png",
+    //   "/investment-house-bedroom.png",
+    //   "/investment-house-kitchen.png"
+    // ]
   },
 
   // Servicios Adicionales
@@ -425,7 +425,7 @@ export const products = [
     price: 15000,
     category: "Servicios",
     subcategory: "Instalación",
-    image: "/modern-house-construction.png",
+    // image: "/modern-house-construction.png", // Comentado - imagen generada por IA
     description: "Instalación profesional de tu vivienda en el terreno.",
     features: ["Equipo especializado", "Instalación rápida", "Garantía de trabajo", "Supervisión técnica"],
     deliveryTime: "1-2 semanas",
@@ -447,12 +447,12 @@ export const products = [
       "Certificado de instalación",
       "Manual de uso"
     ],
-    images: [
-      "/modern-house-construction.png",
-      "/modern-house-exterior.png",
-      "/modern-house-interior.png",
-      "/modern-house-bedroom.png"
-    ]
+    // images: [ // Comentado - imágenes generadas por IA
+    //   "/modern-house-construction.png",
+    //   "/modern-house-exterior.png",
+    //   "/modern-house-interior.png",
+    //   "/modern-house-bedroom.png"
+    // ]
   },
   {
     id: "personalizacion",
@@ -460,7 +460,7 @@ export const products = [
     price: 8000,
     category: "Servicios",
     subcategory: "Personalización",
-    image: "/modern-house-interior.png",
+    // image: "/modern-house-interior.png", // Comentado - imagen generada por IA
     description: "Adaptamos el diseño a tus necesidades específicas.",
     features: ["Diseño personalizado", "Consultoría técnica", "Planos detallados", "Seguimiento del proyecto"],
     deliveryTime: "2-3 semanas",
@@ -482,12 +482,12 @@ export const products = [
       "Garantía de satisfacción",
       "Soporte técnico"
     ],
-    images: [
-      "/modern-house-interior.png",
-      "/modern-house-exterior.png",
-      "/modern-house-bedroom.png",
-      "/modern-house-kitchen.png"
-    ]
+    // images: [ // Comentado - imágenes generadas por IA
+    //   "/modern-house-interior.png",
+    //   "/modern-house-exterior.png",
+    //   "/modern-house-bedroom.png",
+    //   "/modern-house-kitchen.png"
+    // ]
   },
   {
     id: "mantenimiento",
@@ -495,7 +495,7 @@ export const products = [
     price: 5000,
     category: "Servicios",
     subcategory: "Mantenimiento",
-    image: "/modern-house-exterior.png",
+    // image: "/modern-house-exterior.png", // Comentado - imagen generada por IA
     description: "Servicio de mantenimiento preventivo para tu vivienda.",
     features: ["Inspección técnica", "Mantenimiento preventivo", "Reporte detallado", "Garantía de servicio"],
     deliveryTime: "1 semana",
@@ -517,12 +517,12 @@ export const products = [
       "Soporte técnico",
       "Certificado de mantenimiento"
     ],
-    images: [
-      "/modern-house-exterior.png",
-      "/modern-house-interior.png",
-      "/modern-house-bedroom.png",
-      "/modern-house-kitchen.png"
-    ]
+    // images: [ // Comentado - imágenes generadas por IA
+    //   "/modern-house-exterior.png",
+    //   "/modern-house-interior.png",
+    //   "/modern-house-bedroom.png",
+    //   "/modern-house-kitchen.png"
+    // ]
   }
 ]
 

@@ -42,14 +42,7 @@ export default function ContactoPage() {
                 <Card>
                   <CardContent className="p-0">
                     <div className="w-full h-96 bg-muted rounded-lg flex items-center justify-center">
-                      <div className="text-center">
-                        <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
-                        <p className="text-muted-foreground">
-                          Mapa de ubicación
-                          <br />
-                          <span className="text-sm">(Se integrará con Google Maps)</span>
-                        </p>
-                      </div>
+                      <MapPin className="h-12 w-12 text-muted-foreground" />
                     </div>
                   </CardContent>
                 </Card>
