@@ -2,7 +2,7 @@
 import { Sheet, SheetContent, SheetHeader, SheetTitle } from "@/components/ui/sheet"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Minus, Plus, Trash2, ShoppingCart } from "lucide-react"
+import { Trash2, ShoppingCart } from "lucide-react"
 import { toast } from "sonner"
 import { CartItem } from "@/components/cart-provider"
 
@@ -11,11 +11,10 @@ interface CartSidebarProps {
   onClose: () => void
   items: CartItem[]
   onRemoveItem: (id: string) => void
-  onUpdateQuantity: (id: string, quantity: number) => void
 }
 
-export function CartSidebar({ isOpen, onClose, items, onRemoveItem, onUpdateQuantity }: CartSidebarProps) {
-  const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0)
+export function CartSidebar({ isOpen, onClose, items, onRemoveItem }: CartSidebarProps) {
+  const total = items.reduce((sum, item) => sum + item.price, 0)
 
   const handleCheckout = () => {
     if (items.length === 0) {
@@ -28,9 +27,7 @@ ${items
   .map(
     (item) =>
       `• ${item.name} (${item.category})
-  Cantidad: ${item.quantity}
-  Precio unitario: $${item.price.toLocaleString()}
-  Subtotal: $${(item.price * item.quantity).toLocaleString()}`,
+  Precio: $${item.price.toLocaleString()}`,
   )
   .join("\n\n")}
 
@@ -65,7 +62,7 @@ ${items
             <ShoppingCart className="h-5 w-5" />
             Carrito de Compras
             {items.length > 0 && (
-              <Badge variant="secondary">{items.reduce((sum, item) => sum + item.quantity, 0)}</Badge>
+              <Badge variant="secondary" className="text-white">{items.length}</Badge>
             )}
           </SheetTitle>
         </SheetHeader>
@@ -89,26 +86,6 @@ ${items
                         <h4 className="font-medium">{item.name}</h4>
                         <p className="text-sm text-muted-foreground">{item.category}</p>
                         <p className="font-semibold text-primary">${item.price.toLocaleString()}</p>
-                      </div>
-
-                      <div className="flex items-center space-x-2">
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="h-8 w-8 bg-transparent"
-                          onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
-                        >
-                          <Minus className="h-3 w-3" />
-                        </Button>
-                        <span className="w-8 text-center font-medium">{item.quantity}</span>
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="h-8 w-8 bg-transparent"
-                          onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
-                        >
-                          <Plus className="h-3 w-3" />
-                        </Button>
                       </div>
 
                       <Button

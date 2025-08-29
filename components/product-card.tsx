@@ -68,7 +68,7 @@ export function ProductCard({ product, onAddToCart }: ProductCardProps) {
           <Badge className={`${getTypeColor(product.type)} text-white`}>
             {getTypeLabel(product.type)}
           </Badge>
-          <Badge className="bg-secondary text-secondary-foreground">
+          <Badge className="bg-secondary text-white">
             {product.subcategory}
           </Badge>
         </div>

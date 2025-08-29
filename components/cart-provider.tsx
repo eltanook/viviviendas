@@ -8,7 +8,6 @@ export interface CartItem {
   price: number
   category: string
   image?: string
-  quantity: number
 }
 
 interface CartContextType {
@@ -16,9 +15,8 @@ interface CartContextType {
   itemsCount: number
   total: number
   isOpen: boolean
-  addItem: (product: Omit<CartItem, "quantity">) => void
+  addItem: (product: CartItem) => void
   removeItem: (id: string) => void
-  updateQuantity: (id: string, quantity: number) => void
   clearCart: () => void
   openCart: () => void
   closeCart: () => void
@@ -106,7 +104,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
     return () => window.removeEventListener("storage", handleStorageChange)
   }, [])
 
-  const addItem = useCallback((product: Omit<CartItem, "quantity">) => {
+  const addItem = useCallback((product: CartItem) => {
     if (isProcessing) {
       console.log("Already processing, skipping addItem for:", product.name)
       return
@@ -120,8 +118,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
       let newItems: CartItem[]
 
       if (existingItem) {
-        console.log("Adding existing item:", product.name)
-        toast.success(`Se agregó una unidad más de ${product.name}`, {
+        console.log("Product already in cart:", product.name)
+        toast.info(`${product.name} ya está en tu carrito`, {
           id: `add-${product.id}-${Date.now()}`,
           style: {
             background: "oklch(0.55 0.22 25)",
@@ -129,7 +127,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
             border: "1px solid oklch(0.85 0.12 85)",
           },
         })
-        newItems = currentItems.map((item) => (item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item))
+        return currentItems // No agregar duplicados
       } else {
         console.log("Adding new item:", product.name)
         toast.success(`${product.name} fue agregado al carrito`, {
@@ -140,7 +138,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
             border: "1px solid oklch(0.85 0.12 85)",
           },
         })
-        newItems = [...currentItems, { ...product, quantity: 1 }]
+        newItems = [...currentItems, product]
       }
 
       // Save to localStorage
@@ -188,23 +186,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
     [items, isProcessing, saveCartToStorage],
   )
 
-  const updateQuantity = useCallback(
-    (id: string, quantity: number) => {
-      if (quantity <= 0) {
-        removeItem(id)
-        return
-      }
-
-      setItems((currentItems) => {
-        const newItems = currentItems.map((item) => (item.id === id ? { ...item, quantity } : item))
-        // Save to localStorage
-        saveCartToStorage(newItems)
-        return newItems
-      })
-    },
-    [removeItem, saveCartToStorage],
-  )
-
   const clearCart = useCallback(() => {
     setItems([])
     // Clear from localStorage
@@ -231,8 +212,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
   }, [])
 
-  const itemsCount = items.reduce((sum, item) => sum + item.quantity, 0)
-  const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0)
+  const itemsCount = items.length
+  const total = items.reduce((sum, item) => sum + item.price, 0)
 
   const value: CartContextType = {
     items,
@@ -241,7 +222,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
     isOpen,
     addItem,
     removeItem,
-    updateQuantity,
     clearCart,
     openCart,
     closeCart,

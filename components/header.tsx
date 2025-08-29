@@ -119,6 +119,11 @@ export function Header({ cartItemsCount = 0, onCartOpen }: HeaderProps) {
 
           {/* Right Section */}
           <div className="flex items-center justify-end">
+            {/* Theme Toggle */}
+            <Button variant="ghost" size="icon" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
+              {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </Button>
+
             {/* Cart Button */}
             <Button variant="ghost" size="icon" onClick={onCartOpen} className="relative">
               <ShoppingCart className="h-5 w-5" />
@@ -127,11 +132,6 @@ export function Header({ cartItemsCount = 0, onCartOpen }: HeaderProps) {
                   {cartItemsCount}
                 </Badge>
               )}
-            </Button>
-
-            {/* Theme Toggle */}
-            <Button variant="ghost" size="icon" onClick={() => setTheme(theme === "dark" ? "light" : "dark")}>
-              {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
           </div>
         </div>

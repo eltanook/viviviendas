@@ -11,7 +11,6 @@ export function CartWrapper() {
       onClose={cart.closeCart}
       items={cart.items}
       onRemoveItem={cart.removeItem}
-      onUpdateQuantity={cart.updateQuantity}
     />
   )
 }

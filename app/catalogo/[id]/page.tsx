@@ -1,5 +1,4 @@
 "use client"
-import { useState } from "react"
 import { useParams, useRouter } from "next/navigation"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
@@ -17,7 +16,6 @@ export default function ProductPage() {
   const params = useParams()
   const router = useRouter()
   const cart = useCart()
-  const [quantity, setQuantity] = useState(1)
 
   // Buscar el producto usando la función centralizada
   const product = getProductById(params.id as string)
@@ -44,9 +42,7 @@ export default function ProductPage() {
   }
 
   const handleAddToCart = () => {
-    for (let i = 0; i < quantity; i++) {
-      cart.addItem(product)
-    }
+    cart.addItem(product)
   }
 
   const getTypeColor = (type: string) => {
@@ -105,7 +101,7 @@ export default function ProductPage() {
                   <Badge className={`${getTypeColor(product.type)} text-white`}>
                     {getTypeLabel(product.type)}
                   </Badge>
-                  <Badge className="bg-secondary text-secondary-foreground">
+                  <Badge className="bg-secondary text-white">
                     {product.subcategory}
                   </Badge>
                 </div>
@@ -152,34 +148,11 @@ export default function ProductPage() {
                 <span>Tiempo de entrega: {product.deliveryTime}</span>
               </div>
 
-              {/* Quantity and Add to Cart */}
+              {/* Add to Cart */}
               <div className="space-y-4">
-                <div className="flex items-center gap-4">
-                  <label className="font-medium">Cantidad:</label>
-                  <div className="flex items-center border rounded-md">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                      className="px-3"
-                    >
-                      -
-                    </Button>
-                    <span className="px-4 py-2 min-w-[3rem] text-center">{quantity}</span>
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={() => setQuantity(quantity + 1)}
-                      className="px-3"
-                    >
-                      +
-                    </Button>
-                  </div>
-                </div>
-
                 <Button onClick={handleAddToCart} size="lg" className="w-full">
                   <ShoppingCart className="h-5 w-5 mr-2" />
-                  Agregar al carrito - ${(product.price * quantity).toLocaleString()}
+                  Agregar al carrito
                 </Button>
               </div>
 
