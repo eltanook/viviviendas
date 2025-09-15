@@ -74,7 +74,6 @@ export default function ProductPage() {
   return (
     <div className="min-h-screen">
       <Header cartItemsCount={cart.itemsCount} onCartOpen={cart.openCart} />
-
       <main className="pt-16">
         <div className="container mx-auto px-4 py-8">
           {/* Breadcrumb */}
@@ -88,7 +87,6 @@ export default function ProductPage() {
               Volver al catálogo
             </Button>
           </div>
-
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Left Column - Images */}
             <div className="space-y-4">
@@ -106,7 +104,6 @@ export default function ProductPage() {
                   </Badge>
                 </div>
               </div>
-
               {/* Thumbnail Placeholders */}
               <div className="grid grid-cols-4 gap-2">
                 {[1, 2, 3, 4].map((index) => (
@@ -119,35 +116,33 @@ export default function ProductPage() {
                 ))}
               </div>
             </div>
-
             {/* Right Column - Product Info */}
             <div className="space-y-6">
               {/* Title and Price */}
               <div>
                 <h1 className="text-3xl font-bold text-foreground mb-2">{product.name}</h1>
-                <p className="text-lg text-muted-foreground mb-4">{product.description}</p>
+                <p className="text-lg text-muted-foreground mb-4">{product.description && product.type === 'croquis' ? null : product.description}</p>
                 <div className="text-3xl font-bold text-primary">${product.price.toLocaleString()}</div>
               </div>
-
-              {/* Features */}
-              <div>
-                <h3 className="text-lg font-semibold mb-3">Características principales</h3>
-                <div className="grid grid-cols-2 gap-2">
-                  {product.features.map((feature, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span className="text-sm">{feature}</span>
-                    </div>
-                  ))}
+              {/* Features (solo si existen) */}
+              {product.features && product.features.length > 0 && (
+                <div>
+                  <h3 className="text-lg font-semibold mb-3">Características principales</h3>
+                  <div className="grid grid-cols-2 gap-2">
+                    {product.features.map((feature, index) => (
+                      <div key={index} className="flex items-center gap-2">
+                        <CheckCircle className="h-4 w-4 text-primary" />
+                        <span className="text-sm">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-              </div>
-
+              )}
               {/* Delivery Time */}
               <div className="flex items-center gap-2 text-muted-foreground">
                 <Clock className="h-5 w-5" />
                 <span>Tiempo de entrega: {product.deliveryTime}</span>
               </div>
-
               {/* Add to Cart */}
               <div className="space-y-4">
                 <Button onClick={handleAddToCart} size="lg" className="w-full">
@@ -155,7 +150,6 @@ export default function ProductPage() {
                   Agregar al carrito
                 </Button>
               </div>
-
               {/* Trust Indicators */}
               <div className="grid grid-cols-3 gap-4 pt-4 border-t">
                 <div className="text-center">
@@ -176,41 +170,50 @@ export default function ProductPage() {
               </div>
             </div>
           </div>
-
           {/* Product Details */}
           <div className="mt-16 space-y-12">
-            {/* Description */}
+            {/* Descripción detallada o info croquis */}
             <div>
-              <h2 className="text-2xl font-bold mb-6">Descripción detallada</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">{product.longDescription}</p>
+              {product.type === 'croquis' ? (
+                <>
+                  <h2 className="text-2xl font-bold mb-6">Viviendas Tu Nuevo Hogar: Tu casa, en menos tiempo</h2>
+                  <CroquisDescription description={product.description} />
+                </>
+              ) : (
+                <>
+                  <h2 className="text-2xl font-bold mb-6">Descripción detallada</h2>
+                  <p className="text-lg text-muted-foreground leading-relaxed">{product.longDescription}</p>
+                </>
+              )}
             </div>
-
-            {/* Specifications */}
-            <div>
-              <h2 className="text-2xl font-bold mb-6">Especificaciones técnicas</h2>
-              <div className="grid md:grid-cols-2 gap-6">
-                {Object.entries(product.specifications).map(([key, value]) => (
-                  <div key={key} className="flex justify-between py-2 border-b">
-                    <span className="font-medium">{key}</span>
-                    <span className="text-muted-foreground">{value}</span>
-                  </div>
-                ))}
+            {/* Specifications (solo si existen) */}
+            {product.specifications && Object.keys(product.specifications).length > 0 && (
+              <div>
+                <h2 className="text-2xl font-bold mb-6">Especificaciones técnicas</h2>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {Object.entries(product.specifications).map(([key, value]) => (
+                    <div key={key} className="flex justify-between py-2 border-b">
+                      <span className="font-medium">{key}</span>
+                      <span className="text-muted-foreground">{value}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-
-            {/* What's Included */}
-            <div>
-              <h2 className="text-2xl font-bold mb-6">¿Qué incluye?</h2>
-              <div className="grid md:grid-cols-2 gap-4">
-                {product.included.map((item, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                    <span>{item}</span>
-                  </div>
-                ))}
+            )}
+            {/* What's Included (solo si existen) */}
+            {product.included && product.included.length > 0 && (
+              <div>
+                <h2 className="text-2xl font-bold mb-6">¿Qué incluye?</h2>
+                <div className="grid md:grid-cols-2 gap-4">
+                  {product.included.map((item, index) => (
+                    <div key={index} className="flex items-center gap-3">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-
+            )}
             {/* Related Products */}
             <div>
               <h2 className="text-2xl font-bold mb-6">Productos relacionados</h2>
@@ -231,9 +234,149 @@ export default function ProductPage() {
           </div>
         </div>
       </main>
-
       <Footer />
       <WhatsAppFloat />
     </div>
   )
+
+}
+
+// Componente para mostrar la descripción de croquis de forma visual
+
+
+function CroquisDescription({ description }: { description: string }) {
+  // Separar en tres bloques principales usando divisores
+  let blocks = description.split(/_{10,}|\n_{6,}/g).map(b => b.trim()).filter(Boolean);
+  // Eliminar el título duplicado si está presente
+  if (blocks[0]?.startsWith('Viviendas Tu Nuevo Hogar: Tu casa, en menos tiempo')) {
+    blocks[0] = blocks[0].replace(/^Viviendas Tu Nuevo Hogar: Tu casa, en menos tiempo\.?\n?/, '').trim();
+  }
+  // Primer bloque: presentación
+  const presentacion = blocks[0] || "";
+  // Segundo bloque: sistema y diseño personalizado
+  const sistemaYDiseno = blocks[1] || "";
+  // Tercer bloque: ventajas y materiales
+  const ventajasYMateriales = blocks.slice(2).join("\n");
+
+  // Utilidad para sublistas (o. ...)
+  function renderListWithSublist(lines: string[]) {
+    // Agrupar por título principal y subitems, manteniendo los bullets originales
+    const blocks: { title: string, items: string[] }[] = [];
+    let currentBlock: { title: string, items: string[] } | null = null;
+    lines.forEach((line) => {
+      // Título principal: termina en ':' y no empieza con 'o ' ni '•'
+      if (/^[A-ZÁÉÍÓÚÜÑ][^:]+:$/u.test(line)) {
+        if (currentBlock) blocks.push(currentBlock);
+        currentBlock = { title: line.replace(/:$/, ''), items: [] };
+      } else if (line.trim() === '') {
+        // Ignorar líneas vacías
+      } else {
+        // Mantener el bullet (•/o) en el item
+        if (currentBlock) {
+          currentBlock.items.push(line);
+        } else {
+          blocks.push({ title: '', items: [line] });
+        }
+      }
+    });
+    if (currentBlock) blocks.push(currentBlock);
+    return (
+      <div className="space-y-4">
+        {blocks.map((block, idx) =>
+          block.title ? (
+            <div key={block.title + idx}>
+              <span className="font-bold text-base">{block.title}:</span>
+              <div className="mt-1">
+                {block.items.map((item, i) => {
+                  // Si empieza con •
+                  if (/^\s*•/.test(item)) {
+                    return <p key={i} className="text-base font-normal ml-2">{item.replace(/^\s*•\s*/, '')}</p>;
+                  }
+                  // Si empieza con o (con cualquier cantidad de espacios/tabs antes o después)
+                  if (/^\s*o\s+/.test(item)) {
+                    return <p key={i} className="text-base font-normal ml-6">{item.replace(/^\s*o\s+/, '')}</p>;
+                  }
+                  // Si es un título de sección (sin dos puntos y sin viñeta), mostrarlo grande y bold
+                  if (/^[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]+( [A-ZÁÉÍÓÚÜÑa-záéíóúüñ]+)*$/.test(item.trim())) {
+                    return <p key={i} className="mt-4 mb-1 font-bold text-lg">{item}</p>;
+                  }
+                  // Si es un item normal, mostrarlo como texto regular
+                  return <p key={i} className="text-base font-normal ml-2">{item}</p>;
+                })}
+              </div>
+            </div>
+          ) : (
+            block.items.map((item, i) => {
+              // Si el item es un título de sección (sin dos puntos y sin viñeta), mostrarlo grande y bold
+              if (/^[A-ZÁÉÍÓÚÜÑ][a-záéíóúüñ]+( [A-ZÁÉÍÓÚÜÑa-záéíóúüñ]+)*$/.test(item.trim())) {
+                return <p key={i} className="mt-4 mb-1 font-bold text-lg">{item}</p>;
+              }
+              // Si empieza con •
+              if (/^\s*•/.test(item)) {
+                return <p key={i} className="text-base font-normal ml-2">{item}</p>;
+              }
+              // Si empieza con o
+              if (/^\s*o\s+/.test(item)) {
+                return <p key={i} className="text-base font-normal ml-6">{item.replace(/^\s*o\s+/, '')}</p>;
+              }
+              // Si es un item normal, mostrarlo como texto regular
+              return <p key={i} className="text-base font-normal ml-2">{item}</p>;
+            })
+          )
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-10">
+      {/* Bloque 1: Presentación */}
+      <div>
+        {presentacion.split("\n").map((p, i) => (
+          <p key={i} className="text-lg text-muted-foreground leading-relaxed mb-2">{p}</p>
+        ))}
+      </div>
+      <Separator className="my-6" />
+      {/* Bloque 2: Sistema y diseño personalizado */}
+      <div>
+        {sistemaYDiseno.split(/\n(?=¿Cómo lo logramos\?|Diseño Personalizado)/g).map((section, i) => {
+          if (section.startsWith('¿Cómo lo logramos?')) {
+            return <div key={i}><h3 className="text-xl font-semibold mb-2">¿Cómo lo logramos? El sistema de Construcción en Seco</h3><p className="text-lg text-muted-foreground leading-relaxed">{section.replace('¿Cómo lo logramos? El sistema de Construcción en Seco', '').replace('¿Cómo lo logramos?', '')}</p></div>;
+          }
+          if (section.startsWith('Diseño Personalizado')) {
+            return <div key={i} className="mt-8"><h3 className="text-xl font-semibold mb-4">Diseño Personalizado: Tu hogar, a tu medida</h3><p className="text-lg text-muted-foreground leading-relaxed">{section.replace('Diseño Personalizado: Tu hogar, a tu medida', '').replace('Diseño Personalizado', '')}</p></div>;
+          }
+          return <p key={i} className="text-lg text-muted-foreground leading-relaxed">{section}</p>;
+        })}
+      </div>
+      <Separator className="my-6" />
+      {/* Bloque 3: Ventajas y materiales */}
+      <div className="space-y-8">
+        {/* Ventajas */}
+        {ventajasYMateriales.includes('Otras ventajas de nuestro sistema:') && (
+          (() => {
+            const lines = ventajasYMateriales.split('Otras ventajas de nuestro sistema:')[1].split('Estructura y Materiales')[0].split('\n').filter(l => l.trim());
+            return (
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Otras ventajas de nuestro sistema</h3>
+                {renderListWithSublist(lines)}
+              </div>
+            );
+          })()
+        )}
+        {/* Materiales */}
+        {ventajasYMateriales.includes('Estructura y Materiales') && (
+          (() => {
+            const lines = ventajasYMateriales.split('Estructura y Materiales')[1].split('\n').filter(l => l.trim());
+            return (
+              <div>
+                <h3 className="text-xl font-semibold mb-2">Estructura y Materiales</h3>
+                {renderListWithSublist(lines)}
+              </div>
+            );
+          })()
+        )}
+      </div>
+    </div>
+  );
 }

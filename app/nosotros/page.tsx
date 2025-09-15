@@ -99,19 +99,15 @@ export default function NosotrosPage() {
               </div>
             </div>
             <div className="grid lg:grid-cols-2 gap-16 items-center">
-              <div className="space-y-6">
+              <div className="space-y-6 order-1 lg:order-1">
                 <h3 className="text-2xl font-semibold text-primary mb-4">
                   Quienes somos
                 </h3>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                  Somos un equipo de profesionales que dedicó su vida a la construcción de viviendas premoldeadas. 
-                  Entendemos la dificultad de muchas personas para acceder a una casa propia.
-                </p>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  Nuestro propósito es hacer realidad ese sueño, ofreciendo una solución accesible y rápida para un sector de la sociedad que más lo necesita.
+                  En Viviendas Tu Nuevo Hogar entendemos la dificultad de muchas personas para acceder a una casa propia. Nuestro propósito es hacer realidad ese sueño, ofreciendo una solución accesible y rápida para quienes más lo necesitan.
                 </p>
               </div>
-              <div className="relative">
+              <div className="relative order-2 lg:order-2">
                 <img
                   src="/modern-house-construction.png"
                   alt="Construcción en seco - Sistema prefabricado"
@@ -122,6 +118,133 @@ export default function NosotrosPage() {
                   <div className="text-sm">Fundada</div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* ¿Cómo lo logramos? El sistema de Construcción en Seco */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <div className="p-3 bg-primary rounded-lg">
+                  <Hammer className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h2 className="text-3xl font-bold text-foreground">
+                  ¿Cómo lo logramos? El sistema de Construcción en Seco
+                </h2>
+              </div>
+            </div>
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="relative order-1 lg:order-1">
+                <img
+                  src="/modern-house-exterior.png"
+                  alt="Sistema de construcción en seco"
+                  className="rounded-lg shadow-xl w-full h-[400px] object-cover"
+                />
+              </div>
+              <div className="space-y-6 order-2 lg:order-2">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                  Nos especializamos en la Construcción en Seco, también conocida como viviendas prefabricadas o premoldeadas. Este sistema se basa en el uso de materiales secos, lo que nos permite fabricar la mayor parte de tu vivienda —desde muros y techos hasta la estructura completa— en nuestra fábrica.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                  La gran ventaja de este método es la rapidez. Una vez que los componentes están listos, los trasladamos al terreno y los ensamblamos, reduciendo significativamente los tiempos de construcción e instalación en el lugar. Esto se traduce en que tendrás tu nuevo hogar listo para vivir en mucho menos tiempo que con la construcción tradicional.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Diseño Personalizado */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <div className="p-3 bg-primary rounded-lg">
+                  <Home className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h2 className="text-3xl font-bold text-foreground">
+                  Diseño Personalizado: Tu hogar, a tu medida
+                </h2>
+              </div>
+            </div>
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="relative order-1 lg:order-2">
+                <img
+                  src="/modern-house-interior.png"
+                  alt="Diseño personalizado de viviendas"
+                  className="rounded-lg shadow-xl w-full h-[400px] object-cover"
+                />
+              </div>
+              <div className="space-y-6 order-2 lg:order-1">
+                <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                  Sabemos que cada familia es única, y por eso tu casa también debe serlo. Una de las grandes ventajas de nuestro sistema de construcción es la flexibilidad en el diseño.
+                </p>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-4">
+                  A diferencia de la construcción tradicional, nuestro sistema te permite adaptar la vivienda a tu idea o a lo que soñaste para tu nuevo hogar. No solo construimos, te ayudamos a crear un espacio que refleje tu estilo y satisfaga todas tus necesidades.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Ventajas */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <div className="p-3 bg-primary rounded-lg">
+                  <CheckCircle className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h2 className="text-3xl font-bold text-foreground">
+                  Ventajas de nuestro sistema
+                </h2>
+              </div>
+            </div>
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div className="relative order-1 lg:order-1">
+                <img
+                  src="/modern-house-kitchen.png"
+                  alt="Ventajas de la construcción en seco"
+                  className="rounded-lg shadow-xl w-full h-[400px] object-cover"
+                />
+              </div>
+              <ul className="space-y-4 text-lg text-muted-foreground leading-relaxed order-2 lg:order-2">
+                <li>• Mayor rapidez de construcción: Tu casa lista en mucho menos tiempo.</li>
+                <li>• Eficiencia energética: Los materiales utilizados ofrecen un excelente aislamiento, lo que reduce los costos de calefacción y refrigeración.</li>
+                <li>• Menos desperdicio de materiales: Como la mayoría de los componentes se fabrican en nuestro taller, generamos menos residuos en el lugar de instalación.</li>
+                <li>• Costo predecible: Con nuestro sistema, el presupuesto se define con mayor precisión desde el inicio, evitando gastos imprevistos.</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Estructura y Materiales */}
+          <div className="mb-20">
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center space-x-3 mb-6">
+                <div className="p-3 bg-primary rounded-lg">
+                  <Hammer className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h2 className="text-3xl font-bold text-foreground">
+                  Estructura y Materiales
+                </h2>
+              </div>
+              <p className="text-lg text-muted-foreground">
+                Detalle de los materiales y sistemas que utilizamos para garantizar la calidad y durabilidad de tu vivienda:
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {materials.map((material, index) => (
+                <div key={index} className="bg-card p-6 rounded-lg shadow-lg border border-border">
+                  <h3 className="text-lg font-semibold text-foreground mb-4 border-b border-border pb-2">
+                    {material.category}
+                  </h3>
+                  <ul className="space-y-2">
+                    {material.items.map((item, itemIndex) => (
+                      <li key={itemIndex} className="flex items-start space-x-2">
+                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-sm text-muted-foreground leading-relaxed">
+                          {item}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
 
@@ -153,43 +276,6 @@ export default function NosotrosPage() {
               ))}
             </div>
           </div>
-
-          {/* Estructura y Materiales */}
-          <div className="mb-20">
-            <div className="text-center mb-12">
-              <div className="flex items-center justify-center space-x-3 mb-6">
-                <div className="p-3 bg-primary rounded-lg">
-                  <Hammer className="h-8 w-8 text-primary-foreground" />
-                </div>
-                <h2 className="text-3xl font-bold text-foreground">
-                  Estructura y Materiales
-                </h2>
-              </div>
-              <p className="text-lg text-muted-foreground">
-                Utilizamos solo los mejores materiales para garantizar la durabilidad y calidad de tu vivienda
-              </p>
-            </div>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {materials.map((material, index) => (
-                <div key={index} className="bg-card p-6 rounded-lg shadow-lg border border-border">
-                  <h3 className="text-lg font-semibold text-foreground mb-4 border-b border-border pb-2">
-                    {material.category}
-                  </h3>
-                  <ul className="space-y-2">
-                    {material.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start space-x-2">
-                        <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-muted-foreground leading-relaxed">
-                          {item}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-
 
         </div>
 

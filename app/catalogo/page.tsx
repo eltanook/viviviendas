@@ -63,8 +63,8 @@ export default function CatalogoPage() {
   const filteredAndSortedProducts = useMemo(() => {
     const filtered = mockProducts.filter((product) => {
       const matchesSearch =
-        product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        product.description.toLowerCase().includes(searchTerm.toLowerCase())
+        (product.name?.toLowerCase() || "").includes(searchTerm.toLowerCase()) ||
+        (product.description?.toLowerCase() || "").includes(searchTerm.toLowerCase())
       const matchesCategory = selectedCategory === "Todas" || product.category === selectedCategory
       const matchesSubcategory = selectedSubcategory === "Todas" || product.subcategory === selectedSubcategory
       return matchesSearch && matchesCategory && matchesSubcategory
@@ -78,9 +78,9 @@ export default function CatalogoPage() {
         case "price-desc":
           return b.price - a.price
         case "name":
-          return a.name.localeCompare(b.name)
+    return (a.name || "").localeCompare(b.name || "")
         case "delivery":
-          return a.deliveryTime.localeCompare(b.deliveryTime)
+    return (a.deliveryTime || "").localeCompare(b.deliveryTime || "")
         default:
           return 0
       }
@@ -176,7 +176,7 @@ export default function CatalogoPage() {
                             key={subcategory}
                             variant={selectedSubcategory === subcategory ? "default" : "ghost"}
                             className="w-full justify-start"
-                            onClick={() => handleSubcategoryChange(subcategory)}
+                            onClick={() => handleSubcategoryChange(subcategory || "")}
                           >
                             {subcategory}
                           </Button>
@@ -235,7 +235,7 @@ export default function CatalogoPage() {
                           key={subcategory}
                           variant={selectedSubcategory === subcategory ? "default" : "ghost"}
                           className="w-full justify-start"
-                          onClick={() => handleSubcategoryChange(subcategory)}
+                          onClick={() => handleSubcategoryChange(subcategory || "")}
                         >
                           {subcategory}
                         </Button>

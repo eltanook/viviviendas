@@ -1,209 +1,158 @@
+const descriptionBase = "Viviendas Tu Nuevo Hogar: Tu casa, en menos tiempo.\nEn Viviendas Tu Nuevo Hogar, fundada en 2025, por gente que dedico su vida a la construcción de viviendas premoldeadas de ahí que entendemos la dificultad de muchas personas para acceder a una casa propia. Nuestro propósito es hacer realidad ese sueño, ofreciendo una solución accesible y rápida para un sector de la sociedad que más lo necesita.\n________________________________________\n¿Cómo lo logramos? El sistema de Construcción en Seco\nNos especializamos en la Construcción en Seco, también conocida como viviendas prefabricadas o premoldeadas. Este sistema se basa en el uso de materiales secos, lo que nos permite fabricar la mayor parte de tu vivienda —desde muros y techos hasta la estructura completa— en nuestra fábrica.\nLa gran ventaja de este método es la rapidez. Una vez que los componentes están listos, los trasladamos al terreno y los ensamblamos, reduciendo significativamente los tiempos de construcción e instalación en el lugar. Esto se traduce en que tendrás tu nuevo hogar listo para vivir en mucho menos tiempo que con la construcción tradicional.\n\nDiseño Personalizado: Tu hogar, a tu medida\nSabemos que cada familia es única, y por eso tu casa también debe serlo. Una de las grandes ventajas de nuestro sistema de construcción es la flexibilidad en el diseño.\nA diferencia de la construcción tradicional, nuestro sistema te permite adaptar la vivienda a tu idea o a lo que soñaste para tu nuevo hogar. No solo construimos, te ayudamos a crear un espacio que refleje tu estilo y satisfaga todas tus necesidades.\n________________________________________\nOtras ventajas de nuestro sistema:\n•\tMayor rapidez de construcción: Tu casa lista en mucho menos tiempo.\n•\tEficiencia energética: Los materiales utilizados ofrecen un excelente aislamiento, lo que reduce los costos de calefacción y refrigeración.\n•\tMenos desperdicio de materiales: Como la mayoría de los componentes se fabrican en nuestro taller, generamos menos residuos en el lugar de instalación.\n•\tCosto predecible: Con nuestro sistema, el presupuesto se define con mayor precisión desde el inicio, evitando gastos imprevistos.\n\nEstructura y Materiales\n•\tParedes: \n\to\tEstructura autoportante con bastidores de madera (Saligna) de 1” x 3” y 2” x 3”.\n\to\tAislación: Fieltro asfáltico como barrera de vapor.\n•\tRevestimiento Exterior: \n\to\tPlacas cementicias planas de 6mm Superboard de Eternit Argentina.\n\to\tBase de revestimiento texturado aplicado a rodillo como mordiente para futuras aplicaciones de látex.\n•\tRevestimiento Interior: \n\to\tPlacas de yeso Durlok o similar, instaladas sin masillado ni tomado de juntas para facilitar futuros trabajos de pintura.\nAberturas\n•\tExteriores: \n\to\tPerfiles de aluminio blanco línea herrero con vidrio incluido.\n•\tInteriores: \n\to\tPuertas placas línea estándar.\nInstalaciones\n•\tEléctrica: \n\to\tCañerías distribuidas y embutidas en paneles con bocas estándares utilizando tubos y cajas de PVC.\n•\tAgua fría y caliente: \n\to\tCañerías en paneles sanitarios individuales para baño y cocina, con caños, codos y accesorios fusionados.\nCielorraso y Techo\n•\tCielorraso: \n\to\tRevestimiento integral en madera machimbre de 1/2”, estructurado sobre bastidores autoportantes de madera (Saligna) de 1” x 2”.\n\to\tAislación: Fieltro asfáltico como barrera de vapor.\n•\tEstructura de Techo: \n\to\tMadera (Saligna) conformando cabreadas reticulares para la fijación de clavaderas y chapas de techo (acanaladas, sinusoidales calibre 27).";
+
 // Datos centralizados de productos
 export const products = [
   // Croquis de Viviendas por Tamaño
-  {
-    id: "croquis-22",
-    name: "Croquis 22m² - Vivienda Compacta",
-    price: 45000,
-    category: "Croquis por Tamaño",
-    subcategory: "22m²",
-    // image: "/modern-house-exterior.png", // Comentado - imagen generada por IA
-    description: "Vivienda compacta ideal para una persona o pareja. Incluye living comedor, cocina, baño y dormitorio.",
-    features: ["1 dormitorio", "Living comedor integrado", "Cocina funcional", "Baño completo"],
+    {
+    id: "croquis-21",
+    name: "Nuestro Hogar #21",
+    price: 42000,
+    category: "Croquis",
+    subcategory: "21m²",
+    description: `Viviendas Tu Nuevo Hogar: Tu casa, en menos tiempo.
+En Viviendas Tu Nuevo Hogar, fundada en 2025, por gente que dedico su vida a la construcción de viviendas premoldeadas de ahí que entendemos la dificultad de muchas personas para acceder a una casa propia. Nuestro propósito es hacer realidad ese sueño, ofreciendo una solución accesible y rápida para un sector de la sociedad que más lo necesita.
+________________________________________
+¿Cómo lo logramos? El sistema de Construcción en Seco
+Nos especializamos en la Construcción en Seco, también conocida como viviendas prefabricadas o premoldeadas. Este sistema se basa en el uso de materiales secos, lo que nos permite fabricar la mayor parte de tu vivienda —desde muros y techos hasta la estructura completa— en nuestra fábrica.
+La gran ventaja de este método es la rapidez. Una vez que los componentes están listos, los trasladamos al terreno y los ensamblamos, reduciendo significativamente los tiempos de construcción e instalación en el lugar. Esto se traduce en que tendrás tu nuevo hogar listo para vivir en mucho menos tiempo que con la construcción tradicional.
+
+Diseño Personalizado: Tu hogar, a tu medida
+Sabemos que cada familia es única, y por eso tu casa también debe serlo. Una de las grandes ventajas de nuestro sistema de construcción es la flexibilidad en el diseño.
+A diferencia de la construcción tradicional, nuestro sistema te permite adaptar la vivienda a tu idea o a lo que soñaste para tu nuevo hogar. No solo construimos, te ayudamos a crear un espacio que refleje tu estilo y satisfaga todas tus necesidades.
+________________________________________
+Otras ventajas de nuestro sistema:
+• Mayor rapidez de construcción: Tu casa lista en mucho menos tiempo.
+• Eficiencia energética: Los materiales utilizados ofrecen un excelente aislamiento, lo que reduce los costos de calefacción y refrigeración.
+• Menos desperdicio de materiales: Como la mayoría de los componentes se fabrican en nuestro taller, generamos menos residuos en el lugar de instalación.
+• Costo predecible: Con nuestro sistema, el presupuesto se define con mayor precisión desde el inicio, evitando gastos imprevistos.
+
+Estructura y Materiales
+• Paredes: 
+	o Estructura autoportante con bastidores de madera (Saligna) de 1” x 3” y 2” x 3”.
+	o Aislación: Fieltro asfáltico como barrera de vapor.
+• Revestimiento Exterior: 
+	o Placas cementicias planas de 6mm Superboard de Eternit Argentina.
+	o Base de revestimiento texturado aplicado a rodillo como mordiente para futuras aplicaciones de látex.
+• Revestimiento Interior: 
+	o Placas de yeso Durlok o similar, instaladas sin masillado ni tomado de juntas para facilitar futuros trabajos de pintura.
+Aberturas
+• Exteriores: 
+	o Perfiles de aluminio blanco línea herrero con vidrio incluido.
+• Interiores: 
+	o Puertas placas línea estándar.
+Instalaciones
+• Eléctrica: 
+	o Cañerías distribuidas y embutidas en paneles con bocas estándares utilizando tubos y cajas de PVC.
+• Agua fría y caliente: 
+	o Cañerías en paneles sanitarios individuales para baño y cocina, con caños, codos y accesorios fusionados.
+Cielorraso y Techo
+• Cielorraso: 
+	o Revestimiento integral en madera machimbre de 1/2”, estructurado sobre bastidores autoportantes de madera (Saligna) de 1” x 2”.
+	o Aislación: Fieltro asfáltico como barrera de vapor.
+• Estructura de Techo: 
+	o Madera (Saligna) conformando cabreadas reticulares para la fijación de clavaderas y chapas de techo (acanaladas, sinusoidales calibre 27).`,
+    features: [],
     deliveryTime: "4-6 semanas",
-    type: "croquis" as const,
-    longDescription: "Esta vivienda compacta de 22m² está diseñada para maximizar el espacio disponible. Perfecta para una persona o pareja que busca una solución práctica y funcional. El diseño incluye un living comedor integrado que se conecta perfectamente con la cocina, un dormitorio acogedor y un baño completo. La distribución optimizada permite aprovechar cada metro cuadrado de manera eficiente.",
-    specifications: {
-      "Área total": "22m²",
-      "Dormitorios": "1",
-      "Baños": "1",
-      "Altura": "2.40m",
-      "Material principal": "Construcción en seco",
-      "Aislamiento": "Térmico y acústico"
-    },
-    included: [
-      "Planos arquitectónicos completos",
-      "Especificaciones técnicas",
-      "Lista de materiales",
-      "Instrucciones de montaje",
-      "Garantía de diseño"
-    ],
-    // images: [ // Comentado - imágenes generadas por IA
-    //   "/modern-house-exterior.png",
-    //   "/modern-house-interior.png",
-    //   "/modern-house-bedroom.png",
-    //   "/modern-house-kitchen.png"
-    // ]
+    type: "croquis" as const
   },
   {
     id: "croquis-25",
-    name: "Croquis 25m² - Espacio Funcional",
+    name: "Nuestro Hogar #25",
     price: 52000,
-    category: "Croquis por Tamaño",
+    category: "Croquis",
     subcategory: "25m²",
-    // image: "/modern-house-interior.png", // Comentado - imagen generada por IA
-    description: "Espacio funcional para pequeñas familias con distribución optimizada.",
-    features: ["1 dormitorio", "Living comedor amplio", "Cocina equipada", "Baño completo"],
+    description: descriptionBase,
+    features: [],
     deliveryTime: "4-6 semanas",
-    type: "croquis" as const,
-    longDescription: "Con 25m² de espacio bien distribuido, esta vivienda ofrece una solución ideal para pequeñas familias. El living comedor amplio se conecta con una cocina equipada, mientras que el dormitorio principal proporciona privacidad y confort. El baño completo incluye todas las comodidades necesarias. La distribución permite una circulación fluida entre todos los espacios.",
-    specifications: {
-      "Área total": "25m²",
-      "Dormitorios": "1",
-      "Baños": "1",
-      "Altura": "2.40m",
-      "Material principal": "Construcción en seco",
-      "Aislamiento": "Térmico y acústico"
-    },
-    included: [
-      "Planos arquitectónicos completos",
-      "Especificaciones técnicas",
-      "Lista de materiales",
-      "Instrucciones de montaje",
-      "Garantía de diseño"
-    ],
-    // images: [ // Comentado - imágenes generadas por IA
-    //   "/modern-house-interior.png",
-    //   "/modern-house-exterior.png",
-    //   "/modern-house-bedroom.png",
-    //   "/modern-house-kitchen.png"
-    // ]
+    type: "croquis" as const
+  },
+  {
+    id: "croquis-25b",
+    name: "Nuestro Hogar #25 B",
+    price: 54000,
+    category: "Croquis",
+    subcategory: "25m² B",
+    description: descriptionBase,
+    features: [],
+    deliveryTime: "4-6 semanas",
+    type: "croquis" as const
   },
   {
     id: "croquis-29",
-    name: "Croquis 29m² - Un Dormitorio",
+    name: "Nuestro Hogar #29",
     price: 58000,
-    category: "Croquis por Tamaño",
+    category: "Croquis",
     subcategory: "29m²",
-    // image: "/modern-house-bedroom.png", // Comentado - imagen generada por IA
-    description: "Vivienda con un dormitorio y living comedor espacioso.",
-    features: ["1 dormitorio amplio", "Living comedor", "Cocina", "Baño completo"],
+    description: descriptionBase,
+    features: [],
     deliveryTime: "4-6 semanas",
-    type: "croquis" as const,
-    longDescription: "Esta vivienda de 29m² ofrece un dormitorio amplio y un living comedor espacioso que se adapta perfectamente a las necesidades de una pareja o una pequeña familia. La cocina está diseñada para ser funcional y práctica, mientras que el baño completo incluye todas las comodidades. La distribución permite aprovechar al máximo el espacio disponible.",
-    specifications: {
-      "Área total": "29m²",
-      "Dormitorios": "1",
-      "Baños": "1",
-      "Altura": "2.40m",
-      "Material principal": "Construcción en seco",
-      "Aislamiento": "Térmico y acústico"
-    },
-    included: [
-      "Planos arquitectónicos completos",
-      "Especificaciones técnicas",
-      "Lista de materiales",
-      "Instrucciones de montaje",
-      "Garantía de diseño"
-    ],
-    // images: [ // Comentado - imágenes generadas por IA
-    //   "/modern-house-bedroom.png",
-    //   "/modern-house-interior.png",
-    //   "/modern-house-exterior.png",
-    //   "/modern-house-kitchen.png"
-    // ]
+    type: "croquis" as const
   },
   {
     id: "croquis-36",
-    name: "Croquis 36m² - Dos Dormitorios",
+    name: "Nuestro Hogar #36",
     price: 72000,
-    category: "Croquis por Tamaño",
+    category: "Croquis",
     subcategory: "36m²",
-    // image: "/modern-house-kitchen.png", // Comentado - imagen generada por IA
-    description: "Casa con dos dormitorios y espacios amplios para familias pequeñas.",
-    features: ["2 dormitorios", "Living comedor", "Cocina", "Baño completo"],
+    description: descriptionBase,
+    features: [],
     deliveryTime: "5-7 semanas",
-    type: "croquis" as const,
-    longDescription: "Con 36m² de espacio, esta vivienda incluye dos dormitorios perfectos para familias pequeñas. El living comedor amplio se conecta con una cocina funcional, mientras que los dormitorios proporcionan privacidad y confort. El baño completo incluye todas las comodidades necesarias. La distribución permite una circulación fluida entre todos los espacios.",
-    specifications: {
-      "Área total": "36m²",
-      "Dormitorios": "2",
-      "Baños": "1",
-      "Altura": "2.40m",
-      "Material principal": "Construcción en seco",
-      "Aislamiento": "Térmico y acústico"
-    },
-    included: [
-      "Planos arquitectónicos completos",
-      "Especificaciones técnicas",
-      "Lista de materiales",
-      "Instrucciones de montaje",
-      "Garantía de diseño"
-    ],
-    // images: [ // Comentado - imágenes generadas por IA
-    //   "/modern-house-kitchen.png",
-    //   "/modern-house-bedroom.png",
-    //   "/modern-house-interior.png",
-    //   "/modern-house-exterior.png"
-    // ]
+    type: "croquis" as const
   },
   {
     id: "croquis-47",
-    name: "Croquis 47m² - Tres Dormitorios",
+    name: "Nuestro Hogar #47",
     price: 85000,
-    category: "Croquis por Tamaño",
+    category: "Croquis",
     subcategory: "47m²",
-    // image: "/traditional-family-house.png", // Comentado - imagen generada por IA
-    description: "Vivienda familiar con tres dormitorios y espacios de convivencia.",
-    features: ["3 dormitorios", "Living comedor", "Cocina", "2 baños"],
+    description: descriptionBase,
+    features: [],
     deliveryTime: "6-8 semanas",
-    type: "croquis" as const,
-    longDescription: "Esta vivienda de 47m² está diseñada para familias numerosas, con tres dormitorios espaciosos y dos baños completos. El living comedor amplio se conecta con una cocina equipada, mientras que los dormitorios proporcionan privacidad y confort. La distribución permite aprovechar al máximo el espacio disponible y crear un ambiente familiar acogedor.",
-    specifications: {
-      "Área total": "47m²",
-      "Dormitorios": "3",
-      "Baños": "2",
-      "Altura": "2.40m",
-      "Material principal": "Construcción en seco",
-      "Aislamiento": "Térmico y acústico"
-    },
-    included: [
-      "Planos arquitectónicos completos",
-      "Especificaciones técnicas",
-      "Lista de materiales",
-      "Instrucciones de montaje",
-      "Garantía de diseño"
-    ],
-    // images: [ // Comentado - imágenes generadas por IA
-    //   "/traditional-family-house.png",
-    //   "/modern-house-bedroom.png",
-    //   "/modern-house-interior.png",
-    //   "/modern-house-kitchen.png"
-    // ]
+    type: "croquis" as const
+  },
+  {
+    id: "croquis-48",
+    name: "Nuestro Hogar #48",
+    price: 88000,
+    category: "Croquis",
+    subcategory: "48m²",
+    description: descriptionBase,
+    features: [],
+    deliveryTime: "6-8 semanas",
+    type: "croquis" as const
+  },
+  {
+    id: "croquis-55",
+    name: "Nuestro Hogar #55",
+    price: 95000,
+    category: "Croquis",
+    subcategory: "55m²",
+    description: descriptionBase,
+    features: [],
+    deliveryTime: "7-9 semanas",
+    type: "croquis" as const
   },
   {
     id: "croquis-66",
-    name: "Croquis 66m² - Casa Familiar",
+    name: "Nuestro Hogar #66",
     price: 110000,
-    category: "Croquis por Tamaño",
+    category: "Croquis",
     subcategory: "66m²",
-    // image: "/traditional-house-interior.png", // Comentado - imagen generada por IA
-    description: "Casa grande para familias numerosas con amplios espacios.",
-    features: ["3-4 dormitorios", "Living comedor", "Cocina", "2 baños", "Galería"],
+    description: descriptionBase,
+    features: [],
     deliveryTime: "7-9 semanas",
-    type: "croquis" as const,
-    longDescription: "Con 66m² de espacio, esta casa familiar incluye de 3 a 4 dormitorios espaciosos, un living comedor amplio, una cocina equipada, dos baños completos y una galería. Perfecta para familias numerosas que buscan espacio y confort. La distribución permite crear un ambiente familiar acogedor y funcional.",
-    specifications: {
-      "Área total": "66m²",
-      "Dormitorios": "3-4",
-      "Baños": "2",
-      "Altura": "2.40m",
-      "Material principal": "Construcción en seco",
-      "Aislamiento": "Térmico y acústico"
-    },
-    included: [
-      "Planos arquitectónicos completos",
-      "Especificaciones técnicas",
-      "Lista de materiales",
-      "Instrucciones de montaje",
-      "Garantía de diseño"
-    ],
-    // images: [ // Comentado - imágenes generadas por IA
-    //   "/traditional-house-interior.png",
-    //   "/traditional-family-house.png",
-    //   "/modern-house-bedroom.png",
-    //   "/modern-house-kitchen.png"
-    // ]
+    type: "croquis" as const
+  },
+  {
+    id: "croquis-66b",
+    name: "Nuestro Hogar #66 B",
+    price: 112000,
+    category: "Croquis",
+    subcategory: "66m² B",
+    description: descriptionBase,
+    features: [],
+    deliveryTime: "7-9 semanas",
+    type: "croquis" as const
   },
 
   // Viviendas por Tipo de Uso

@@ -76,7 +76,10 @@ export function ProductCard({ product, onAddToCart }: ProductCardProps) {
 
       <CardContent className="px-4 pb-4 flex-1">
         <h3 className="font-semibold text-lg mb-2 line-clamp-2">{product.name}</h3>
-        <p className="text-muted-foreground text-sm mb-3 line-clamp-2">{product.description}</p>
+        {/* Descripción eliminada para croquis */}
+        {product.type !== "croquis" && (
+          <p className="text-muted-foreground text-sm mb-3 line-clamp-2">{product.description}</p>
+        )}
         
         {/* Features */}
         <div className="mb-3">
