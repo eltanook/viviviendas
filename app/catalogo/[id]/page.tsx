@@ -1,5 +1,7 @@
 "use client"
 import { useParams, useRouter } from "next/navigation"
+import { useState, useRef } from "react"
+import Image from "next/image"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { WhatsAppFloat } from "@/components/whatsapp-float"
@@ -13,6 +15,11 @@ import { useCart } from "@/components/cart-provider"
 import { products, getProductById, getRelatedProducts } from "@/lib/products"
 
 export default function ProductPage() {
+
+  // Estado para la imagen principal
+  const [mainImageIdx, setMainImageIdx] = useState(0)
+  const thumbsContainerRef = useRef<HTMLDivElement>(null)
+  const thumbRefs = useRef<(HTMLButtonElement | null)[]>([])
   const params = useParams()
   const router = useRouter()
   const cart = useCart()
@@ -89,11 +96,35 @@ export default function ProductPage() {
           </div>
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Left Column - Images */}
-            <div className="space-y-4">
-              {/* Main Image Placeholder */}
+            <div className="space-y-4 min-w-0">
+              {/* Imagen principal */}
               <div className="relative">
-                <div className="w-full h-96 bg-muted rounded-lg shadow-lg flex items-center justify-center">
-                  <Home className="h-16 w-16 text-muted-foreground" />
+                <div
+                  className={
+                    [
+                      "w-full bg-muted rounded-lg shadow-lg flex items-center justify-center overflow-hidden",
+                      mainImageIdx === 2 ? "max-w-full max-h-[90vh]" : "h-96"
+                    ].join(' ')
+                  }
+                >
+                  {product.images && product.images.length > 0 ? (
+                    <img
+                      src={product.images[mainImageIdx]}
+                      alt={`Imagen ${mainImageIdx + 1} de ${product.name}`}
+                      className={
+                        mainImageIdx === 2
+                          ? "object-contain w-auto h-auto max-w-full max-h-[90vh]"
+                          : "object-cover w-full h-full"
+                      }
+                      style={
+                        mainImageIdx === 2
+                          ? { maxHeight: '90vh', maxWidth: '100%' }
+                          : { height: '100%', width: '100%' }
+                      }
+                    />
+                  ) : (
+                    <Home className="h-16 w-16 text-muted-foreground" />
+                  )}
                 </div>
                 <div className="absolute top-2 left-2 flex gap-2">
                   <Badge className={`${getTypeColor(product.type)} text-white`}>
@@ -104,17 +135,35 @@ export default function ProductPage() {
                   </Badge>
                 </div>
               </div>
-              {/* Thumbnail Placeholders */}
-              <div className="grid grid-cols-4 gap-2">
-                {[1, 2, 3, 4].map((index) => (
-                  <div
-                    key={index}
-                    className="w-full h-20 bg-muted rounded-lg border-2 border-transparent flex items-center justify-center"
-                  >
-                    <Home className="h-6 w-6 text-muted-foreground" />
-                  </div>
-                ))}
-              </div>
+              {/* Miniaturas clickeables */}
+              {product.images && product.images.length > 1 && (
+                <div
+                  ref={thumbsContainerRef}
+                  className="flex w-full min-w-0 flex-shrink gap-2 overflow-x-auto overflow-y-hidden p-1 scrollbar-hide mb-6"
+                  style={{ WebkitOverflowScrolling: 'touch' }}
+                >
+                  {product.images.map((img, idx) => (
+                    <button
+                      key={idx}
+                      ref={el => { thumbRefs.current[idx] = el }}
+                      onClick={() => setMainImageIdx(idx)}
+                      aria-pressed={mainImageIdx === idx}
+                      className={`relative h-auto min-w-[6rem] sm:min-w-[8rem] shrink-0 aspect-square rounded-lg overflow-hidden border-2 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-[#FF4444]
+                        ${mainImageIdx === idx
+                          ? "border-[#FF4444] shadow-lg scale-105"
+                          : "border-slate-200 dark:border-slate-700 hover:border-slate-300 dark:hover:border-slate-600"}
+                      `}
+                    >
+                      <Image
+                        src={img}
+                        alt={product.name}
+                        fill
+                        className="object-cover"
+                      />
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
             {/* Right Column - Product Info */}
             <div className="space-y-6">
@@ -221,8 +270,16 @@ export default function ProductPage() {
                 {getRelatedProducts(product.id, product.category, 3).map((relatedProduct) => (
                   <Card key={relatedProduct.id} className="hover:shadow-lg transition-shadow cursor-pointer" onClick={() => router.push(`/catalogo/${relatedProduct.id}`)}>
                     <CardContent className="p-4">
-                      <div className="w-full h-32 bg-muted rounded-md mb-3 flex items-center justify-center">
-                        <Home className="h-8 w-8 text-muted-foreground" />
+                      <div className="w-full h-44 bg-muted rounded-md mb-3 flex items-center justify-center overflow-hidden">
+                        {relatedProduct.images && relatedProduct.images.length > 0 ? (
+                          <img
+                            src={relatedProduct.images[0]}
+                            alt={relatedProduct.name}
+                            className="object-cover w-full h-full"
+                          />
+                        ) : (
+                          <Home className="h-8 w-8 text-muted-foreground" />
+                        )}
                       </div>
                       <h3 className="font-semibold mb-2 line-clamp-2">{relatedProduct.name}</h3>
                       <p className="text-primary font-bold">${relatedProduct.price.toLocaleString()}</p>

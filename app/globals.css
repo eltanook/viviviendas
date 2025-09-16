@@ -1,3 +1,17 @@
+/* En mobile, restaurar el scrollbar nativo para .scrollbar-hide */
+@media (max-width: 767px) {
+  .scrollbar-hide::-webkit-scrollbar {
+    background: initial !important;
+    width: initial !important;
+  }
+  .scrollbar-hide::-webkit-scrollbar-thumb {
+    background: initial !important;
+    border-radius: initial !important;
+  }
+  .scrollbar-hide::-webkit-scrollbar-track {
+    background: initial !important;
+  }
+}
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -116,6 +130,7 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -170,6 +185,21 @@
   button{
     cursor: pointer;
   }
+
+  
+
+@media (min-width: 768px) {
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* En mobile, no ocultar el scrollbar para .scrollbar-hide, se verá el default */
 
   /* Input styling for better visibility */
   input, textarea, select {
@@ -248,4 +278,7 @@
   .light .cta-outline-button:hover {
     background-color: #e5e7eb !important;
   }
+
+  
 }
+

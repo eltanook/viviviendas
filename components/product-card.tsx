@@ -58,7 +58,9 @@ export function ProductCard({ product, onAddToCart }: ProductCardProps) {
     <Card className="group hover:shadow-lg transition-shadow duration-300 overflow-hidden flex flex-col h-full">
       <div className="relative overflow-hidden">
         <Image
-          src={product.image || "/placeholder.svg?height=300&width=400"}
+          src={
+            product.images?.[0] || "/placeholder.svg?height=300&width=400"
+          }
           alt={product.name}
           width={400}
           height={300}

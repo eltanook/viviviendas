@@ -54,6 +54,12 @@ Cielorraso y Techo
     features: [],
     deliveryTime: "4-6 semanas",
     type: "croquis" as const
+      ,
+      images: [
+        "/imagenes/03.jpg", // Render 3
+        "/imagenes/04.jpg", // Render 4
+        "/planos/21m2.jpg" // Plano
+      ]
   },
   {
     id: "croquis-25",
@@ -65,6 +71,12 @@ Cielorraso y Techo
     features: [],
     deliveryTime: "4-6 semanas",
     type: "croquis" as const
+      ,
+      images: [
+        "/imagenes/05.jpg", // Render 5
+        "/imagenes/06.jpg", // Render 6
+        "/planos/25m2.jpg" // Plano
+      ]
   },
   {
     id: "croquis-25b",
@@ -76,6 +88,12 @@ Cielorraso y Techo
     features: [],
     deliveryTime: "4-6 semanas",
     type: "croquis" as const
+      ,
+      images: [
+        "/imagenes/07.jpg", // Render 7
+        "/imagenes/08.jpg", // Render 8
+        "/planos/25m2b.jpg" // Plano
+      ]
   },
   {
     id: "croquis-29",
@@ -87,6 +105,12 @@ Cielorraso y Techo
     features: [],
     deliveryTime: "4-6 semanas",
     type: "croquis" as const
+      ,
+      images: [
+        "/imagenes/01.jpg", // Render 1
+        "/imagenes/02.jpg", // Render 2
+        "/planos/29m2.jpg" // Plano
+      ]
   },
   {
     id: "croquis-36",
@@ -98,6 +122,12 @@ Cielorraso y Techo
     features: [],
     deliveryTime: "5-7 semanas",
     type: "croquis" as const
+      ,
+      images: [
+        "/imagenes/09.jpg", // Render 9
+        "/imagenes/10.jpg", // Render 10
+        "/planos/36m2.jpg" // Plano
+      ]
   },
   {
     id: "croquis-47",
@@ -109,6 +139,12 @@ Cielorraso y Techo
     features: [],
     deliveryTime: "6-8 semanas",
     type: "croquis" as const
+      ,
+      images: [
+        "/imagenes/11.jpg", // Render 11
+        "/imagenes/12.jpg", // Render 12
+        "/planos/47m2.jpg" // Plano
+      ]
   },
   {
     id: "croquis-48",
@@ -120,6 +156,12 @@ Cielorraso y Techo
     features: [],
     deliveryTime: "6-8 semanas",
     type: "croquis" as const
+      ,
+      images: [
+        "/imagenes/15.jpg", // Render 15
+        "/imagenes/16.jpg", // Render 16
+        "/planos/48m2.jpg" // Plano
+      ]
   },
   {
     id: "croquis-55",
@@ -131,6 +173,12 @@ Cielorraso y Techo
     features: [],
     deliveryTime: "7-9 semanas",
     type: "croquis" as const
+      ,
+      images: [
+        "/imagenes/17.jpg", // Render 17
+        "/imagenes/18.jpg", // Render 18
+        "/planos/55m2.jpg" // Plano
+      ]
   },
   {
     id: "croquis-66",
@@ -142,6 +190,12 @@ Cielorraso y Techo
     features: [],
     deliveryTime: "7-9 semanas",
     type: "croquis" as const
+      ,
+      images: [
+        "/imagenes/13.jpg", // Render 13
+        "/imagenes/14.jpg", // Render 14
+        "/planos/66m2.jpg" // Plano
+      ]
   },
   {
     id: "croquis-66b",
@@ -153,6 +207,12 @@ Cielorraso y Techo
     features: [],
     deliveryTime: "7-9 semanas",
     type: "croquis" as const
+      ,
+      images: [
+        "/imagenes/19.jpg", // Render 19
+        "/imagenes/20.jpg", // Render 20
+        "/planos/66m2B.jpg" // Plano
+      ]
   },
 
   // Viviendas por Tipo de Uso
