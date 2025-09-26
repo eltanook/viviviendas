@@ -1,4 +1,4 @@
-const descriptionBase = "Viviendas Tu Nuevo Hogar: Tu casa, en menos tiempo.\nEn Viviendas Tu Nuevo Hogar, fundada en 2025, por gente que dedico su vida a la construcción de viviendas premoldeadas de ahí que entendemos la dificultad de muchas personas para acceder a una casa propia. Nuestro propósito es hacer realidad ese sueño, ofreciendo una solución accesible y rápida para un sector de la sociedad que más lo necesita.\n________________________________________\n¿Cómo lo logramos? El sistema de Construcción en Seco\nNos especializamos en la Construcción en Seco, también conocida como viviendas prefabricadas o premoldeadas. Este sistema se basa en el uso de materiales secos, lo que nos permite fabricar la mayor parte de tu vivienda —desde muros y techos hasta la estructura completa— en nuestra fábrica.\nLa gran ventaja de este método es la rapidez. Una vez que los componentes están listos, los trasladamos al terreno y los ensamblamos, reduciendo significativamente los tiempos de construcción e instalación en el lugar. Esto se traduce en que tendrás tu nuevo hogar listo para vivir en mucho menos tiempo que con la construcción tradicional.\n\nDiseño Personalizado: Tu hogar, a tu medida\nSabemos que cada familia es única, y por eso tu casa también debe serlo. Una de las grandes ventajas de nuestro sistema de construcción es la flexibilidad en el diseño.\nA diferencia de la construcción tradicional, nuestro sistema te permite adaptar la vivienda a tu idea o a lo que soñaste para tu nuevo hogar. No solo construimos, te ayudamos a crear un espacio que refleje tu estilo y satisfaga todas tus necesidades.\n________________________________________\nOtras ventajas de nuestro sistema:\n•\tMayor rapidez de construcción: Tu casa lista en mucho menos tiempo.\n•\tEficiencia energética: Los materiales utilizados ofrecen un excelente aislamiento, lo que reduce los costos de calefacción y refrigeración.\n•\tMenos desperdicio de materiales: Como la mayoría de los componentes se fabrican en nuestro taller, generamos menos residuos en el lugar de instalación.\n•\tCosto predecible: Con nuestro sistema, el presupuesto se define con mayor precisión desde el inicio, evitando gastos imprevistos.\n\nEstructura y Materiales\n•\tParedes: \n\to\tEstructura autoportante con bastidores de madera (Saligna) de 1” x 3” y 2” x 3”.\n\to\tAislación: Fieltro asfáltico como barrera de vapor.\n•\tRevestimiento Exterior: \n\to\tPlacas cementicias planas de 6mm Superboard de Eternit Argentina.\n\to\tBase de revestimiento texturado aplicado a rodillo como mordiente para futuras aplicaciones de látex.\n•\tRevestimiento Interior: \n\to\tPlacas de yeso Durlok o similar, instaladas sin masillado ni tomado de juntas para facilitar futuros trabajos de pintura.\nAberturas\n•\tExteriores: \n\to\tPerfiles de aluminio blanco línea herrero con vidrio incluido.\n•\tInteriores: \n\to\tPuertas placas línea estándar.\nInstalaciones\n•\tEléctrica: \n\to\tCañerías distribuidas y embutidas en paneles con bocas estándares utilizando tubos y cajas de PVC.\n•\tAgua fría y caliente: \n\to\tCañerías en paneles sanitarios individuales para baño y cocina, con caños, codos y accesorios fusionados.\nCielorraso y Techo\n•\tCielorraso: \n\to\tRevestimiento integral en madera machimbre de 1/2”, estructurado sobre bastidores autoportantes de madera (Saligna) de 1” x 2”.\n\to\tAislación: Fieltro asfáltico como barrera de vapor.\n•\tEstructura de Techo: \n\to\tMadera (Saligna) conformando cabreadas reticulares para la fijación de clavaderas y chapas de techo (acanaladas, sinusoidales calibre 27).";
+const descriptionBase = "Viviendas Tu Nuevo Hogar: Tu casa, en menos tiempo.\nEn Viviendas Tu Nuevo Hogar, fundada en 2025, por gente que dedico su vida a la construcción de viviendas premoldeadas de ahí que entendemos la dificultad de muchas personas para acceder a una casa propia. Nuestro propósito es hacer realidad ese sueño, ofreciendo una solución accesible y rápida para un sector de la sociedad que más lo necesita.\n________________________________________\n¿Cómo lo logramos? El sistema de Construcción en Seco\nNos especializamos en la Construcción en Seco, también conocida como viviendas prefabricadas o premoldeadas. Este sistema se basa en el uso de materiales secos, lo que nos permite fabricar la mayor parte de tu vivienda —desde muros y techos hasta la estructura completa— en nuestra fábrica.\nLa gran ventaja de este método es la rapidez. Una vez que los componentes están listos, los trasladamos al terreno y los ensamblamos, reduciendo significativamente los tiempos de construcción e instalación en el lugar. Esto se traduce en que tendrás tu nuevo hogar listo para vivir en mucho menos tiempo que con la construcción tradicional.\n\nDiseño Personalizado: Tu hogar, a tu medida\nSabemos que cada familia es única, y por eso tu casa también debe serlo. Una de las grandes ventajas de nuestro sistema de construcción es la flexibilidad en el diseño.\nA diferencia de la construcción tradicional, nuestro sistema te permite adaptar la vivienda a tu idea o a lo que soñaste para tu nuevo hogar. No solo construimos, te ayudamos a crear un espacio que refleje tu estilo y satisfaga todas tus necesidades.\n________________________________________\nOtras ventajas de nuestro sistema:\n•\tMayor rapidez de construcción: Tu casa lista en mucho menos tiempo.\n•\tEficiencia energética: Los materiales utilizados ofrecen un excelente aislamiento, lo que reduce los costos de calefacción y refrigeración.\n•\tMenos desperdicio de materiales: Como la mayoría de los componentes se fabrican en nuestro taller, generamos menos residuos en el lugar de instalación.\n•\tCosto predecible: Con nuestro sistema, el presupuesto se define con mayor precisión desde el inicio, evitando gastos imprevistos.\n\nEstructura y Materiales\n•\tParedes: \n\to\tEstructura autoportante con bastidores de madera (Saligna) de 1” x 3” y 2” x 3”.\n\to\tAislación: Fieltro asfáltico como barrera de vapor.\n•\tRevestimiento Exterior: \n\to\tPlacas cementicias planas de 6mm Superboard de Eternit Argentina.\n\to\tBase de revestimiento texturado aplicado a rodillo como mordiente para futuras aplicaciones de látex.\n•\tRevestimiento Interior: \n\to\tPlacas de yeso Durlok o similar, instaladas sin masillado ni tomado de juntas para facilitar futuros trabajos de pintura.\nAberturas\n•\tExteriores: \n\to\tPerfiles de aluminio blanco línea herrero con vidrio incluido.\n•\tInteriores: \n\to\tPuertas placas línea estándar.\nInstalaciones\n•\tEléctrica: \n\to\tCañerías distribuidas y embutidas en paneles con bocas estándares utilizando tubos y cajas de PVC.\n•\tAgua fría y caliente: \n\to\tCañerías en paneles sanitarios individuales para baño y cocina, con caños, codos y accesorios fusionados.\nCielorraso y Techo\n•\tCielorraso: \n\to\tRevestimiento integral en madera machimbre de 1/2”, estructurado sobre bastidores autoportantes de madera (Saligna) de 1” x 2”.\n\to\tAislación: Fieltro asfáltico como barrera de vapor.\n•\tEstructura de Techo: \n\to\tMadera (Saligna) conformando cabreadas reticulares para la fijación de clavaderas y chapas de techo (acanaladas, sinusoidales calibre 27).\n\nIMPORTANTE:\nLos valores expresados corresponden a cada una de las viviendas premoldeadas que construimos, en obra gris.\nLa Ficha Técnica se encuentra publicada en nuestra página web para una mejor comprensión de las características y materiales.\nEl flete no está incluido en los precios, ya que depende del destino de instalación de la vivienda seleccionada.";
 
 // Datos centralizados de productos
 export const products = [
@@ -6,51 +6,10 @@ export const products = [
     {
     id: "croquis-21",
     name: "Nuestro Hogar #21",
-    price: 42000,
+    price: 5270000,
     category: "Croquis",
     subcategory: "21m²",
-    description: `Viviendas Tu Nuevo Hogar: Tu casa, en menos tiempo.
-En Viviendas Tu Nuevo Hogar, fundada en 2025, por gente que dedico su vida a la construcción de viviendas premoldeadas de ahí que entendemos la dificultad de muchas personas para acceder a una casa propia. Nuestro propósito es hacer realidad ese sueño, ofreciendo una solución accesible y rápida para un sector de la sociedad que más lo necesita.
-________________________________________
-¿Cómo lo logramos? El sistema de Construcción en Seco
-Nos especializamos en la Construcción en Seco, también conocida como viviendas prefabricadas o premoldeadas. Este sistema se basa en el uso de materiales secos, lo que nos permite fabricar la mayor parte de tu vivienda —desde muros y techos hasta la estructura completa— en nuestra fábrica.
-La gran ventaja de este método es la rapidez. Una vez que los componentes están listos, los trasladamos al terreno y los ensamblamos, reduciendo significativamente los tiempos de construcción e instalación en el lugar. Esto se traduce en que tendrás tu nuevo hogar listo para vivir en mucho menos tiempo que con la construcción tradicional.
-
-Diseño Personalizado: Tu hogar, a tu medida
-Sabemos que cada familia es única, y por eso tu casa también debe serlo. Una de las grandes ventajas de nuestro sistema de construcción es la flexibilidad en el diseño.
-A diferencia de la construcción tradicional, nuestro sistema te permite adaptar la vivienda a tu idea o a lo que soñaste para tu nuevo hogar. No solo construimos, te ayudamos a crear un espacio que refleje tu estilo y satisfaga todas tus necesidades.
-________________________________________
-Otras ventajas de nuestro sistema:
-• Mayor rapidez de construcción: Tu casa lista en mucho menos tiempo.
-• Eficiencia energética: Los materiales utilizados ofrecen un excelente aislamiento, lo que reduce los costos de calefacción y refrigeración.
-• Menos desperdicio de materiales: Como la mayoría de los componentes se fabrican en nuestro taller, generamos menos residuos en el lugar de instalación.
-• Costo predecible: Con nuestro sistema, el presupuesto se define con mayor precisión desde el inicio, evitando gastos imprevistos.
-
-Estructura y Materiales
-• Paredes: 
-	o Estructura autoportante con bastidores de madera (Saligna) de 1” x 3” y 2” x 3”.
-	o Aislación: Fieltro asfáltico como barrera de vapor.
-• Revestimiento Exterior: 
-	o Placas cementicias planas de 6mm Superboard de Eternit Argentina.
-	o Base de revestimiento texturado aplicado a rodillo como mordiente para futuras aplicaciones de látex.
-• Revestimiento Interior: 
-	o Placas de yeso Durlok o similar, instaladas sin masillado ni tomado de juntas para facilitar futuros trabajos de pintura.
-Aberturas
-• Exteriores: 
-	o Perfiles de aluminio blanco línea herrero con vidrio incluido.
-• Interiores: 
-	o Puertas placas línea estándar.
-Instalaciones
-• Eléctrica: 
-	o Cañerías distribuidas y embutidas en paneles con bocas estándares utilizando tubos y cajas de PVC.
-• Agua fría y caliente: 
-	o Cañerías en paneles sanitarios individuales para baño y cocina, con caños, codos y accesorios fusionados.
-Cielorraso y Techo
-• Cielorraso: 
-	o Revestimiento integral en madera machimbre de 1/2”, estructurado sobre bastidores autoportantes de madera (Saligna) de 1” x 2”.
-	o Aislación: Fieltro asfáltico como barrera de vapor.
-• Estructura de Techo: 
-	o Madera (Saligna) conformando cabreadas reticulares para la fijación de clavaderas y chapas de techo (acanaladas, sinusoidales calibre 27).`,
+    description: descriptionBase,
     features: [],
     deliveryTime: "4-6 semanas",
     type: "croquis" as const
@@ -64,7 +23,7 @@ Cielorraso y Techo
   {
     id: "croquis-25",
     name: "Nuestro Hogar #25",
-    price: 52000,
+      price: 6750000,
     category: "Croquis",
     subcategory: "25m²",
     description: descriptionBase,
@@ -81,7 +40,7 @@ Cielorraso y Techo
   {
     id: "croquis-25b",
     name: "Nuestro Hogar #25 B",
-    price: 54000,
+      price: 6750000,
     category: "Croquis",
     subcategory: "25m² B",
     description: descriptionBase,
@@ -98,7 +57,7 @@ Cielorraso y Techo
   {
     id: "croquis-29",
     name: "Nuestro Hogar #29",
-    price: 58000,
+      price: 7830000,
     category: "Croquis",
     subcategory: "29m²",
     description: descriptionBase,
@@ -115,7 +74,7 @@ Cielorraso y Techo
   {
     id: "croquis-36",
     name: "Nuestro Hogar #36",
-    price: 72000,
+      price: 9720000,
     category: "Croquis",
     subcategory: "36m²",
     description: descriptionBase,
@@ -132,7 +91,7 @@ Cielorraso y Techo
   {
     id: "croquis-47",
     name: "Nuestro Hogar #47",
-    price: 85000,
+      price: 12900000,
     category: "Croquis",
     subcategory: "47m²",
     description: descriptionBase,
@@ -149,7 +108,7 @@ Cielorraso y Techo
   {
     id: "croquis-48",
     name: "Nuestro Hogar #48",
-    price: 88000,
+      price: 12960000,
     category: "Croquis",
     subcategory: "48m²",
     description: descriptionBase,
@@ -166,7 +125,7 @@ Cielorraso y Techo
   {
     id: "croquis-55",
     name: "Nuestro Hogar #55",
-    price: 95000,
+      price: 14850000,
     category: "Croquis",
     subcategory: "55m²",
     description: descriptionBase,
@@ -183,7 +142,7 @@ Cielorraso y Techo
   {
     id: "croquis-66",
     name: "Nuestro Hogar #66",
-    price: 110000,
+      price: 17820000,
     category: "Croquis",
     subcategory: "66m²",
     description: descriptionBase,
@@ -200,7 +159,7 @@ Cielorraso y Techo
   {
     id: "croquis-66b",
     name: "Nuestro Hogar #66 B",
-    price: 112000,
+      price: 17820000,
     category: "Croquis",
     subcategory: "66m² B",
     description: descriptionBase,
